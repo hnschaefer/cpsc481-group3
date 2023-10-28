@@ -1,0 +1,3 @@
+[submodule "ordering-system/src/icons"]
+	path = ordering-system/src/icons
+	url = https://github.com/twbs/icons.git
