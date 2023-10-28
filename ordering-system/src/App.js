@@ -1,5 +1,8 @@
 import './App.css';
 import spaghetti from './/images/danijela-prijovic-qits91IZv1o-unsplash.jpg'
+import cart from './/icons/icons/cart-fill.svg'
+import person from './/icons/icons/person-fill.svg'
+import cash from './/icons/icons/cash-coin.svg'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
@@ -13,9 +16,12 @@ const App = () => {
   return (
     <div className="App">
       <div>
-        <Button variant="dark" size="lg">order cart</Button>{' '}
-        <Button variant="dark" size="lg">call for server</Button>{' '}
-        <Button variant="dark" size="lg">pay for order</Button>{' '}
+        <Button variant="dark" size="lg">order cart   <Image src={cart} rounded style={{ width: "20px", height: "20px", filter: "invert(100%)" }} />
+        </Button>{' '}
+        <Button variant="dark" size="lg">call for server   <Image src={person} rounded style={{ width: "20px", height: "20px", filter: "invert(100%)" }} />
+        </Button>{' '}
+        <Button variant="dark" size="lg">pay for order   <Image src={cash} rounded style={{ width: "20px", height: "20px", filter: "invert(100%)" }} />
+        </Button>{' '}
       </div>
       <p class="text-left"><u>return to menu</u></p>
       <Container>
