@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "item": "Features"
+  },
+  {
+    "id": 2,
+    "item": "Start + Share"
+  },
+  {
+    "id": 3,
+    "item": "Bowls"
+  },
+  {
+    "id": 4,
+    "item": "Greens"
+  },
+  {
+    "id": 5,
+    "item": "Sushi"
+  },
+  {
+    "id": 6,
+    "item": "Burgers"
+  },
+  {
+    "id": 7,
+    "item": "Mains"
+  },
+  {
+    "id": 8,
+    "item": "Steaks"
+  },
+  {
+    "id": 9,
+    "item": "Desserts"
+  },
+  {
+    "id": 10,
+    "item": "Beverages"
+  }
+]

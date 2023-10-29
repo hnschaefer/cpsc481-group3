@@ -1,37 +1,69 @@
-import './App.css';
-import spaghetti from './/images/danijela-prijovic-qits91IZv1o-unsplash.jpg'
-import cart from './/icons/icons/cart-fill.svg'
-import person from './/icons/icons/person-fill.svg'
-import cash from './/icons/icons/cash-coin.svg'
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
-import Image from 'react-bootstrap/Image';
-import Row from 'react-bootstrap/Row';
-
+import "./App.css";
+import spaghetti from ".//images/danijela-prijovic-qits91IZv1o-unsplash.jpg";
+import cart from ".//icons/icons/cart-fill.svg";
+import person from ".//icons/icons/person-fill.svg";
+import cash from ".//icons/icons/cash-coin.svg";
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+import Col from "react-bootstrap/Col";
+import Container from "react-bootstrap/Container";
+import Image from "react-bootstrap/Image";
+import Row from "react-bootstrap/Row";
 
 const App = () => {
   return (
     <div className="App">
       <div>
-        <Button variant="dark" size="lg">order cart   <Image src={cart} rounded style={{ width: "20px", height: "20px", filter: "invert(100%)" }} />
-        </Button>{' '}
-        <Button variant="dark" size="lg">call for server   <Image src={person} rounded style={{ width: "20px", height: "20px", filter: "invert(100%)" }} />
-        </Button>{' '}
-        <Button variant="dark" size="lg">pay for order   <Image src={cash} rounded style={{ width: "20px", height: "20px", filter: "invert(100%)" }} />
-        </Button>{' '}
+        <Button variant="dark" size="lg">
+          order cart{" "}
+          <Image
+            src={cart}
+            rounded
+            style={{ width: "20px", height: "20px", filter: "invert(100%)" }}
+          />
+        </Button>{" "}
+        <Button variant="dark" size="lg">
+          call for server{" "}
+          <Image
+            src={person}
+            rounded
+            style={{ width: "20px", height: "20px", filter: "invert(100%)" }}
+          />
+        </Button>{" "}
+        <Button variant="dark" size="lg">
+          pay for order{" "}
+          <Image
+            src={cash}
+            rounded
+            style={{ width: "20px", height: "20px", filter: "invert(100%)" }}
+          />
+        </Button>{" "}
       </div>
-      <p class="text-left"><u>return to menu</u></p>
+      <p class="text-left">
+        <u>return to menu</u>
+      </p>
       <Container>
         <Row>
           <Col md={6}>
-            <h1><b>spaghetti portofino</b></h1>
-            <Image src={spaghetti} rounded style={{ width: "480px", height: "400px" }} />
-            <p class="text-left">lemon butter sauce, roasted gem tomatoes, corn, fennel chili crumb, garlic crostini</p>
-            <p class="text-left">customer rating:
-              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+            <h1>
+              <b>spaghetti portofino</b>
+            </h1>
+            <Image
+              src={spaghetti}
+              rounded
+              style={{ width: "480px", height: "400px" }}
+            />
+            <p class="text-left">
+              lemon butter sauce, roasted gem tomatoes, corn, fennel chili
+              crumb, garlic crostini
+            </p>
+            <p class="text-left">
+              customer rating:
+              <link
+                rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+              ></link>
               <span class="fa fa-star checked"></span>
               <span class="fa fa-star checked"></span>
               <span class="fa fa-star checked"></span>
@@ -43,9 +75,11 @@ const App = () => {
           </Col>
           <Col md={6}>
             <h3>customize order</h3>
-            <p class="text-left"><b>add protein</b></p>
+            <p class="text-left">
+              <b>add protein</b>
+            </p>
             <Form>
-              {['checkbox'].map((type) => (
+              {["checkbox"].map((type) => (
                 <div key={`default-${type}`} className="mb-3">
                   <Form.Check
                     type={type}
@@ -66,7 +100,10 @@ const App = () => {
               ))}
             </Form>
             <Form>
-              <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+              <Form.Group
+                className="mb-3"
+                controlId="exampleForm.ControlTextarea1"
+              >
                 <Form.Label>customization notes</Form.Label>
                 <Form.Control as="textarea" rows={3} />
               </Form.Group>
@@ -74,9 +111,11 @@ const App = () => {
           </Col>
         </Row>
       </Container>
-      <Button variant="dark" size="lg">add to order</Button>{' '}
+      <Button variant="dark" size="lg">
+        add to order
+      </Button>{" "}
     </div>
   );
-}
+};
 
 export default App;
