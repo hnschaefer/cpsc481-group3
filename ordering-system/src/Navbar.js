@@ -6,7 +6,11 @@ import Image from "react-bootstrap/Image";
 const Navbar = () => {
   return (
     <div style={{ width: "100%" }}>
-      <Button variant="dark" size="lg" style={{ marginLeft: "12%" }}>
+      <Button
+        variant="dark"
+        size="lg"
+        style={{ padding: "50px", marginLeft: "10%" }}
+      >
         Order Cart
         <Image
           src={cart}
@@ -20,7 +24,11 @@ const Navbar = () => {
           }}
         />
       </Button>{" "}
-      <Button variant="dark" size="lg" style={{ marginLeft: "22%" }}>
+      <Button
+        variant="dark"
+        size="lg"
+        style={{ padding: "50px", marginLeft: "18%" }}
+      >
         Call For Server{" "}
         <Image
           src={person}
@@ -34,7 +42,11 @@ const Navbar = () => {
           }}
         />
       </Button>{" "}
-      <Button variant="dark" size="lg" style={{ marginLeft: "20%" }}>
+      <Button
+        variant="dark"
+        size="lg"
+        style={{ padding: "50px", marginLeft: "20%" }}
+      >
         Pay For Order{" "}
         <Image
           src={cash}

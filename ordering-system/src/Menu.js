@@ -1,9 +1,10 @@
 import "./Menu.css";
-import data from "./menudata.json";
+import data from "./Data/menudata.json";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import { useState } from "react";
 import Features from "./Menu_category_pages/Features.js";
 import Navbar from "./Navbar";
+import Mains from "./Menu_category_pages/Mains";
 
 function Menu() {
   const slideLeft = () => {
@@ -23,7 +24,7 @@ function Menu() {
   var viewportHeight = window.innerHeight;
 
   return (
-    <div style={{ background: "#fdf0db" }}>
+    <div style={{ width: "100%" }}>
       <Navbar />
       <div
         style={{
@@ -31,6 +32,7 @@ function Menu() {
           textAlign: "center",
           marginTop: 60,
           marginBottom: 30,
+          fontWeight: "bold",
         }}
       >
         Menu
@@ -44,7 +46,7 @@ function Menu() {
           {data.map((menu) => (
             <button
               style={{
-                marginLeft: 30,
+                marginLeft: 25,
                 display: "inline-block",
                 fontSize: 40,
                 paddingRight: 150,
@@ -60,10 +62,11 @@ function Menu() {
         </div>
         <MdChevronRight onClick={slideRight} size={40} />
       </div>
-      <h1 style={{ fontSize: 50, fontWeight: "bold", marginLeft: 50 }}>
+      <h1 style={{ fontSize: 50, fontWeight: "bold", marginLeft: "45%" }}>
         {pageStatus}
       </h1>
       {pageStatus === "Features" && <Features />}
+      {pageStatus === "Mains" && <Mains />}
       {console.log(viewportWidth, viewportHeight)}
     </div>
   );

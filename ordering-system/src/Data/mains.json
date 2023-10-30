@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "item": "Truffle Parmesan Chicken",
+    "price": "$31.00",
+    "image": "truffle"
+  },
+  {
+    "id": 2,
+    "item": "Spaghetti Portofino",
+    "price": "$26.75",
+    "image": "portofino"
+  },
+  {
+    "id": 3,
+    "item": "Blackened Creole Chicken",
+    "price": "$29.75",
+    "image": "creole"
+  },
+  {
+    "id": 4,
+    "item": "Crab Cake Frites",
+    "price": "$33.00",
+    "image": "crabcake"
+  },
+  {
+    "id": 5,
+    "item": "Rigatoni Bolognese",
+    "price": "$24.75",
+    "image": "rigatoni"
+  },
+  {
+    "id": 6,
+    "item": "Grilled Dijon Salmon",
+    "price": "$31.75",
+    "image": "salmon"
+  },
+  {
+    "id": 7,
+    "item": "Thai Green Curry",
+    "price": "$24.75",
+    "image": "thai"
+  },
+  {
+    "id": 8,
+    "item": "Butternut Squash Ravioli",
+    "price": "$30.75",
+    "image": "butternut"
+  }
+]
