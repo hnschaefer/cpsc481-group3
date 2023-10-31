@@ -2,8 +2,7 @@ import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import data from "../Data/mains.json";
-import plus from "../icons/icons/plus-circle-fill.svg";
-import Image from "react-bootstrap/Image";
+import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 // import truffle from "../images/Truffle.jpg";
 const Mains = () => {
   return (
@@ -20,19 +19,18 @@ const Mains = () => {
                 src={require("../images/" + menu.image + ".jpg")}
                 style={{ width: "300px", height: "230px" }}
               />
-              <Card.Body>
+              <Card.Body style={{ background: "#000000", color: "#ffffff" }}>
                 <Card.Title style={{ fontSize: 20 }}>{menu.item}</Card.Title>
                 <Card.Text>
                   {menu.price}{" "}
-                  <Image
-                    src={plus}
-                    rounded
+                  <AddCircleOutlineIcon
                     style={{
-                      width: "30px",
-                      height: "30px",
+                      width: "40px",
+                      height: "40px",
                       display: "inline-block",
-                      marginLeft: 190,
+                      marginLeft: 180,
                       marginTop: 10,
+                      color: "#c69a50",
                     }}
                   />
                 </Card.Text>

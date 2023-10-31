@@ -25,49 +25,61 @@ function Menu() {
 
   return (
     <div style={{ width: "100%" }}>
-      <Navbar />
       <div
         style={{
-          fontSize: 55,
-          textAlign: "center",
-          marginTop: 60,
-          marginBottom: 30,
-          fontWeight: "bold",
+          backgroundColor: "#414042",
+          paddingTop: 20,
+          paddingBottom: 20,
         }}
       >
-        Menu
+        <Navbar />
       </div>
-      <div className="relative flex items-center">
-        <MdChevronLeft onClick={slideLeft} size={40} />
+      <div style={{ background: "#fdf0db" }}>
         <div
-          id="slider"
-          className="w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide"
+          style={{
+            fontSize: 55,
+            textAlign: "center",
+            paddingTop: 40,
+            marginBottom: 30,
+            fontWeight: "bold",
+          }}
         >
-          {data.map((menu) => (
-            <button
-              style={{
-                marginLeft: 25,
-                display: "inline-block",
-                fontSize: 40,
-                paddingRight: 150,
-              }}
-              key={menu.id}
-              onClick={() => {
-                setPageStatus(menu.item);
-              }}
-            >
-              {menu.item}
-            </button>
-          ))}
+          Menu
         </div>
-        <MdChevronRight onClick={slideRight} size={40} />
+        <div className="relative flex items-center">
+          <MdChevronLeft onClick={slideLeft} size={40} />
+          <div
+            id="slider"
+            className="w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide"
+          >
+            {data.map((menu) => (
+              <button
+                style={{
+                  marginLeft: 25,
+                  display: "inline-block",
+                  fontSize: 40,
+                  paddingRight: 150,
+                }}
+                key={menu.id}
+                onClick={() => {
+                  setPageStatus(menu.item);
+                }}
+              >
+                {menu.item}
+              </button>
+            ))}
+          </div>
+          <MdChevronRight onClick={slideRight} size={40} />
+        </div>
       </div>
-      <h1 style={{ fontSize: 50, fontWeight: "bold", marginLeft: "45%" }}>
-        {pageStatus}
-      </h1>
-      {pageStatus === "Features" && <Features />}
-      {pageStatus === "Mains" && <Mains />}
-      {console.log(viewportWidth, viewportHeight)}
+      <div style={{ background: "#ffffff", paddingTop: 25 }}>
+        <h1 style={{ fontSize: 50, fontWeight: "bold", textAlign: "center" }}>
+          {pageStatus}
+        </h1>
+        {pageStatus === "Features" && <Features />}
+        {pageStatus === "Mains" && <Mains />}
+        {console.log(viewportWidth, viewportHeight)}
+      </div>
     </div>
   );
 }

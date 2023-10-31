@@ -9,7 +9,13 @@ const Navbar = () => {
       <Button
         variant="dark"
         size="lg"
-        style={{ padding: "50px", marginLeft: "10%" }}
+        style={{
+          padding: "50px",
+          marginLeft: "10%",
+          backgroundColor: "#414042",
+          border: "1px solid #c69a50",
+          borderRadius: 0,
+        }}
       >
         Order Cart
         <Image
@@ -27,7 +33,13 @@ const Navbar = () => {
       <Button
         variant="dark"
         size="lg"
-        style={{ padding: "50px", marginLeft: "18%" }}
+        style={{
+          padding: "50px",
+          marginLeft: "18%",
+          backgroundColor: "#414042",
+          border: "1px solid #c69a50",
+          borderRadius: 0,
+        }}
       >
         Call For Server{" "}
         <Image
@@ -45,7 +57,13 @@ const Navbar = () => {
       <Button
         variant="dark"
         size="lg"
-        style={{ padding: "50px", marginLeft: "20%" }}
+        style={{
+          padding: "50px",
+          marginLeft: "20%",
+          backgroundColor: "#414042",
+          border: "1px solid #c69a50",
+          borderRadius: 0,
+        }}
       >
         Pay For Order{" "}
         <Image
