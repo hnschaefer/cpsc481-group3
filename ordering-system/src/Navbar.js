@@ -5,14 +5,20 @@ import cash from ".//icons/icons/cash-coin.svg";
 import Image from "react-bootstrap/Image";
 const Navbar = () => {
   return (
-    <div style={{ width: "100%" }}>
+    <div
+      style={{
+        width: "100%",
+        display: "flex",
+        justifyContent: "space-between",
+      }}
+    >
       <Button
         variant="dark"
         size="lg"
         style={{
           paddingLeft: 100,
           paddingRight: 100,
-          marginLeft: 80,
+
           paddingBottom: 20,
           paddingTop: 20,
           backgroundColor: "#414042",
@@ -39,7 +45,6 @@ const Navbar = () => {
         style={{
           paddingLeft: 100,
           paddingRight: 100,
-          marginLeft: 300,
           paddingBottom: 20,
           paddingTop: 20,
           backgroundColor: "#414042",
@@ -66,7 +71,6 @@ const Navbar = () => {
         style={{
           paddingLeft: 100,
           paddingRight: 100,
-          marginLeft: 300,
           paddingBottom: 20,
           paddingTop: 20,
           backgroundColor: "#414042",
