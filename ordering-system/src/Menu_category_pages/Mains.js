@@ -10,9 +10,12 @@ const Mains = () => {
       style={{}}
       className="overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide"
     >
-      <Row xs={2} md={4} className="g-4">
+      <Row xs={2} md={4} className="g-4" style={{ display: "flex" }}>
         {data.map((menu) => (
-          <Col key={menu.id}>
+          <Col
+            key={menu.id}
+            style={{ display: "flex", justifyContent: "center" }}
+          >
             <Card style={{ width: "300px" }}>
               <Card.Img
                 variant="top"
