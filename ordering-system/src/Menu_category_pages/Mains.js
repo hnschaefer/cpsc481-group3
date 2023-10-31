@@ -7,7 +7,11 @@ import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 const Mains = () => {
   return (
     <div
-      style={{ marginLeft: 110, marginTop: 50 }}
+      style={{
+        display: "flex",
+        justifyContent: "space-between",
+        marginLeft: 120,
+      }}
       className="overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide"
     >
       <Row xs={2} md={4} className="g-4">
