@@ -24,7 +24,7 @@ function Menu() {
   var viewportHeight = window.innerHeight;
 
   return (
-    <div style={{ display: "-ms-inline-flexbox" }}>
+    <div style={{ display: "flex", flexDirection: "column" }}>
       <div
         style={{
           backgroundColor: "#414042",
