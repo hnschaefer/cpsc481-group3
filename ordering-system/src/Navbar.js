@@ -24,6 +24,7 @@ const Navbar = () => {
           backgroundColor: "#414042",
           border: "1px solid #c69a50",
           borderRadius: 0,
+          fontSize: 50,
         }}
       >
         Order Cart
@@ -50,6 +51,7 @@ const Navbar = () => {
           backgroundColor: "#414042",
           border: "1px solid #c69a50",
           borderRadius: 0,
+          fontSize: 50,
         }}
       >
         Call For Server{" "}
@@ -77,6 +79,7 @@ const Navbar = () => {
           backgroundColor: "#414042",
           border: "1px solid #c69a50",
           borderRadius: 0,
+          fontSize: 50,
         }}
       >
         Pay For Order{" "}
