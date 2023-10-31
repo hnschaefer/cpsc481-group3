@@ -24,7 +24,7 @@ function Menu() {
   var viewportHeight = window.innerHeight;
 
   return (
-    <div style={{ width: "100%" }}>
+    <div style={{ display: "-ms-inline-flexbox" }}>
       <div
         style={{
           backgroundColor: "#414042",
@@ -34,7 +34,7 @@ function Menu() {
       >
         <Navbar />
       </div>
-      <div style={{ background: "#fdf0db" }}>
+      <div style={{ background: "#f7c97c" }}>
         <div
           style={{
             fontSize: 55,

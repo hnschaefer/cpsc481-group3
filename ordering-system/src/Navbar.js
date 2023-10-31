@@ -10,8 +10,11 @@ const Navbar = () => {
         variant="dark"
         size="lg"
         style={{
-          padding: "50px",
-          marginLeft: "10%",
+          paddingLeft: 100,
+          paddingRight: 100,
+          marginLeft: 80,
+          paddingBottom: 20,
+          paddingTop: 20,
           backgroundColor: "#414042",
           border: "1px solid #c69a50",
           borderRadius: 0,
@@ -34,8 +37,11 @@ const Navbar = () => {
         variant="dark"
         size="lg"
         style={{
-          padding: "50px",
-          marginLeft: "18%",
+          paddingLeft: 100,
+          paddingRight: 100,
+          marginLeft: 300,
+          paddingBottom: 20,
+          paddingTop: 20,
           backgroundColor: "#414042",
           border: "1px solid #c69a50",
           borderRadius: 0,
@@ -58,8 +64,11 @@ const Navbar = () => {
         variant="dark"
         size="lg"
         style={{
-          padding: "50px",
-          marginLeft: "20%",
+          paddingLeft: 100,
+          paddingRight: 100,
+          marginLeft: 300,
+          paddingBottom: 20,
+          paddingTop: 20,
           backgroundColor: "#414042",
           border: "1px solid #c69a50",
           borderRadius: 0,

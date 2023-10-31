@@ -19,16 +19,16 @@ const Mains = () => {
                 src={require("../images/" + menu.image + ".jpg")}
                 style={{ width: "300px", height: "230px" }}
               />
-              <Card.Body style={{ background: "#000000", color: "#ffffff" }}>
+              <Card.Body style={{ background: "#414042", color: "#ffffff" }}>
                 <Card.Title style={{ fontSize: 20 }}>{menu.item}</Card.Title>
                 <Card.Text>
                   {menu.price}{" "}
                   <AddCircleOutlineIcon
                     style={{
-                      width: "40px",
-                      height: "40px",
+                      width: "30px",
+                      height: "30px",
                       display: "inline-block",
-                      marginLeft: 180,
+                      marginLeft: 190,
                       marginTop: 10,
                       color: "#c69a50",
                     }}
