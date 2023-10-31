@@ -75,7 +75,13 @@ function Menu() {
       <h1 style={{ fontSize: 50, fontWeight: "bold", textAlign: "center" }}>
         {pageStatus}
       </h1>
-      <div style={{ display: "flex", flexDirection: "row", marginLeft: 110 }}>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          alignContent: "center",
+        }}
+      >
         {pageStatus === "Features" && <Features />}
         {pageStatus === "Mains" && <Mains />}
         {console.log(viewportWidth, viewportHeight)}
