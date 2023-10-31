@@ -18,7 +18,7 @@ const Navbar = () => {
         style={{
           paddingLeft: 100,
           paddingRight: 100,
-
+          marginLeft: 20,
           paddingBottom: 20,
           paddingTop: 20,
           backgroundColor: "#414042",
@@ -73,6 +73,7 @@ const Navbar = () => {
           paddingRight: 100,
           paddingBottom: 20,
           paddingTop: 20,
+          marginRight: 20,
           backgroundColor: "#414042",
           border: "1px solid #c69a50",
           borderRadius: 0,
