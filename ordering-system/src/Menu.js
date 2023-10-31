@@ -72,10 +72,10 @@ function Menu() {
           <MdChevronRight onClick={slideRight} size={40} />
         </div>
       </div>
-      <div style={{ background: "#ffffff", paddingTop: 25 }}>
-        <h1 style={{ fontSize: 50, fontWeight: "bold", textAlign: "center" }}>
-          {pageStatus}
-        </h1>
+      <h1 style={{ fontSize: 50, fontWeight: "bold", textAlign: "center" }}>
+        {pageStatus}
+      </h1>
+      <div style={{ display: "flex", flexDirection: "row", marginLeft: 110 }}>
         {pageStatus === "Features" && <Features />}
         {pageStatus === "Mains" && <Mains />}
         {console.log(viewportWidth, viewportHeight)}
