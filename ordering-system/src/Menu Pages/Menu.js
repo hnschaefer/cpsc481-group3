@@ -71,11 +71,12 @@ function Menu() {
           fontSize: 50,
           fontWeight: "bold",
           textAlign: "center",
+          paddingTop: 20,
         }}
       >
         {pageStatus}
       </h1>
-      <div>
+      <div style={{ paddingTop: 30 }}>
         <Features status={pageStatus} />
       </div>
     </div>
