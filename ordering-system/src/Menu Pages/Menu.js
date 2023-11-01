@@ -1,10 +1,9 @@
 import "./Menu.css";
-import data from "./Data/menudata.json";
+import data from "../Data/menudata.json";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import { useState } from "react";
-import Features from "./Menu_category_pages/Features.js";
-import Navbar from "./Navbar";
-import Mains from "./Menu_category_pages/Mains";
+import Features from "./ItemDisplay.js";
+import Navbar from "../Navbar";
 
 function Menu() {
   const slideLeft = () => {
@@ -18,10 +17,6 @@ function Menu() {
   };
 
   const [pageStatus, setPageStatus] = useState("Features");
-  var viewportWidth = window.innerWidth;
-
-  // Get the current viewport height
-  var viewportHeight = window.innerHeight;
 
   return (
     <div style={{ display: "flex", flexDirection: "column" }}>
@@ -40,7 +35,7 @@ function Menu() {
             fontSize: 55,
             textAlign: "center",
             paddingTop: 40,
-            marginBottom: 30,
+            paddingBottom: 40,
             fontWeight: "bold",
           }}
         >
@@ -55,7 +50,6 @@ function Menu() {
             {data.map((menu) => (
               <button
                 style={{
-                  marginLeft: 25,
                   display: "inline-block",
                   fontSize: 40,
                   paddingRight: 150,
@@ -81,10 +75,8 @@ function Menu() {
       >
         {pageStatus}
       </h1>
-      <div style={{}}>
-        {pageStatus === "Features" && <Features />}
-        {pageStatus === "Mains" && <Mains />}
-        {console.log(viewportWidth, viewportHeight)}
+      <div>
+        <Features status={pageStatus} />
       </div>
     </div>
   );

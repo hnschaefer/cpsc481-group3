@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "item": "Salmon Aburi Roll",
+    "price": "$19.25",
+    "image": "salmonaburiroll"
+  },
+  {
+    "id": 2,
+    "item": "Zen Roll",
+    "price": "$16.50",
+    "image": "zenroll"
+  },
+  {
+    "id": 3,
+    "item": "Prawn Crunch Roll",
+    "price": "$18.50",
+    "image": "prawncrunchroll"
+  }
+]

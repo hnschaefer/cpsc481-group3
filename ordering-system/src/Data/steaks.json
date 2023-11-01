@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "item": "Millionaire's Cut",
+    "price": "$54.75",
+    "image": "millionairescut"
+  },
+  {
+    "id": 2,
+    "item": "Steak & Mushroom",
+    "price": "$38.75",
+    "image": "steakmushroom"
+  },
+  {
+    "id": 3,
+    "item": "Peppercorn Steak",
+    "price": "$38.75",
+    "image": "peppercornsteak"
+  },
+  {
+    "id": 4,
+    "item": "Steak Frites",
+    "price": "$33.75",
+    "image": "steakfrites"
+  },
+  {
+    "id": 5,
+    "item": "Creole Steak & Prawns",
+    "price": "$44.25",
+    "image": "creolesteak"
+  },
+  {
+    "id": 6,
+    "item": "Chargrilled Steak",
+    "price": "$34.75",
+    "image": "chargrilledsteak"
+  }
+]

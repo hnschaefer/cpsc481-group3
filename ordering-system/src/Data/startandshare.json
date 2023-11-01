@@ -1,0 +1,75 @@
+[
+  {
+    "id": 1,
+    "item": "Tuna Stack",
+    "price": "$21.25",
+    "image": "tunastack"
+  },
+  {
+    "id": 2,
+    "item": "Wagyu Beef Carpaccio",
+    "price": "$21.75",
+    "image": "beefcarpaccio"
+  },
+  {
+    "id": 3,
+    "item": "Szechuan Lettuce Wraps",
+    "price": "$23.25",
+    "image": "szechuanwraps"
+  },
+  {
+    "id": 4,
+    "item": "Avocado Dip",
+    "price": "$14.00",
+    "image": "avocadodip"
+  },
+  {
+    "id": 5,
+    "item": "Mini Crispy Chicken Sandwhiches",
+    "price": "$17.50",
+    "image": "minichicken"
+  },
+  {
+    "id": 6,
+    "item": "Truffle Fries",
+    "price": "$12.50",
+    "image": "trufflefries"
+  },
+  {
+    "id": 7,
+    "item": "Crab Cake",
+    "price": "$19.50",
+    "image": "sharecrabcake"
+  },
+  {
+    "id": 8,
+    "item": "Mini Burgers",
+    "price": "$17.50",
+    "image": "miniburg"
+  },
+  {
+    "id": 9,
+    "item": "Crispy Yam Fries",
+    "price": "$12.00",
+    "image": "yamfries"
+  },
+  {
+    "id": 10,
+    "item": "Hot Chicken & Pickles",
+    "price": "$18.00",
+    "image": "chickenpickle"
+  },
+  {
+    "id": 11,
+    "item": "Chicken Wings",
+    "price": "$19.50",
+    "image": "chickenwings"
+  },
+  {
+    "id": 12,
+    "item": "Ravioli & Prawn Trio",
+    "price": "$18.50",
+    "image": "ravioliprawn"
+  }
+  
+]

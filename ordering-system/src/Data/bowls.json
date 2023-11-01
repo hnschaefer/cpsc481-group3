@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "item": "The Med Bowl",
+    "price": "$24.75",
+    "image": "medbowl"
+  },
+  {
+    "id": 2,
+    "item": "Crispy Tofu Bowl",
+    "price": "$24.00",
+    "image": "crispytofubowl"
+  },
+  {
+    "id": 3,
+    "item": "Tuna Poke Bowl",
+    "price": "$25.75",
+    "image": "tunapokebowl"
+  },
+  {
+    "id": 4,
+    "item": "Teriyaki Chicken Rice Bowl",
+    "price": "$23.00",
+    "image": "chickenricebowl"
+  }
+]

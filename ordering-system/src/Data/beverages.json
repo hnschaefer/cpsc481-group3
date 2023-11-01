@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "item": "Cadillac Margarita (2oz)",
+    "price": "$20.00",
+    "image": "cadillac"
+  },
+  {
+    "id": 2,
+    "item": "Mezcal Margarita (2oz)",
+    "price": "$13.25",
+    "image": "mezcal"
+  },
+  {
+    "id": 3,
+    "item": "Signature Sangria (6oz)",
+    "price": "$12.50",
+    "image": "sangriasignature"
+  },
+  {
+    "id": 4,
+    "item": "Midnight Hour (2oz)",
+    "price": "$13.00",
+    "image": "midnighthour"
+  },
+  {
+    "id": 5,
+    "item": "Penicillin (2oz)",
+    "price": "$16.00",
+    "image": "penicillin"
+  },
+  {
+    "id": 6,
+    "item": "Whiskey Sour (2oz)",
+    "price": "$13.50",
+    "image": "whiskeysour"
+  },
+  {
+    "id": 7,
+    "item": "Vodka (1oz)",
+    "price": "$10.75",
+    "image": "vodka"
+  },
+  {
+    "id": 8,
+    "item": "Kyoto Fizz (1.5oz)",
+    "price": "$12.75",
+    "image": "kyotofizz"
+  },
+  {
+    "id": 9,
+    "item": "Tequila Seltzer (1oz)",
+    "price": "$10.75",
+    "image": "tequilaseltzer"
+  },
+  {
+    "id": 10,
+    "item": "Aperol Spritz (5oz)",
+    "price": "$13.75",
+    "image": "aperolspritz"
+  },
+  {
+    "id": 11,
+    "item": "The Bellini (2oz)",
+    "price": "$11.00",
+    "image": "bellini"
+  },
+  {
+    "id": 12,
+    "item": "The Pearl (2oz)",
+    "price": "$12.50",
+    "image": "pearl"
+  },
+  {
+    "id": 13,
+    "item": "Hula Hula (2oz)",
+    "price": "$13.25",
+    "image": "hulahula"
+  },
+  {
+    "id": 14,
+    "item": "Coca Cola",
+    "price": "$7.00",
+    "image": "cocacola"
+  }
+]

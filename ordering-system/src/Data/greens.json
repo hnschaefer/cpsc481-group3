@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "item": "Lemongrass Noodle Salad",
+    "price": "$23.75",
+    "image": "lemongrasssalad"
+  },
+  {
+    "id": 2,
+    "item": "Avocado Kale Salad",
+    "price": "$18.25",
+    "image": "avocadokalesalad"
+  },
+  {
+    "id": 3,
+    "item": "Raincost Greens",
+    "price": "$24.75",
+    "image": "raincoastgreens"
+  }
+]

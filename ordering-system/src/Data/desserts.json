@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "item": "Key Lime Pie",
+    "price": "$12.00",
+    "image": "keylimepie"
+  },
+  {
+    "id": 2,
+    "item": "Chocolate Lava Cake",
+    "price": "$11.25",
+    "image": "lavacake"
+  },
+  {
+    "id": 3,
+    "item": "New York Cheesecake",
+    "price": "$12.00",
+    "image": "newyorkcheesecake"
+  },
+  {
+    "id": 4,
+    "item": "Six Layer Chocolate Slice",
+    "price": "$18.00",
+    "image": "sixchocolate"
+  },
+  {
+    "id": 5,
+    "item": "Peanut Butter Crunch Bar",
+    "price": "$12.00",
+    "image": "pbcrunch"
+  }
+]

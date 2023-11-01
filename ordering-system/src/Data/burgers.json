@@ -1,0 +1,27 @@
+[
+    {
+      "id": 1,
+      "item": "The Feenie Burger",
+      "price": "$24.75",
+      "image": "feenieburger"
+    },
+    {
+      "id": 2,
+      "item": "Garden Burger",
+      "price": "$21.75",
+      "image": "gardenburger"
+    },
+    {
+      "id": 3,
+      "item": "Cheddar Bacon Burger",
+      "price": "$23.50",
+      "image": "cheddarbaconburger"
+    },
+    {
+      "id": 4,
+      "item": "Impossible Burger",
+      "price": "$23.25",
+      "image": "impossibleburger"
+    }
+  ]
+  
