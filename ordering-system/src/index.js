@@ -5,6 +5,7 @@ import Menu from "../src/Menu Pages/Menu";
 
 import reportWebVitals from "./reportWebVitals";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import CallForServer from "./Popups/CallForServer";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

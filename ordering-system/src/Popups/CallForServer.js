@@ -17,10 +17,7 @@ function CallForServer() {
   };
 
   const handleRequestClick = () => {
-    // Implement the logic for handling the "Request" button click here
-    // For example, you can send a request to the server
-    // You can replace this with your actual logic
-    alert('Request sent');
+    alert('The server is on their way!');
     setItems((prevItems) =>
     prevItems.map((item) => ({ ...item, completed: false }))
   );
@@ -32,13 +29,12 @@ function CallForServer() {
         {items.map((item) => (
           <li key={item.id} className={item.completed ? 'completed' : ''}>
             {item.text}
-            <button onClick={() => toggleItemCompletion(item.id)}>
-              {item.completed ? 'Uncheck' : 'Check'}
+            <button onClick={() => toggleItemCompletion(item.id)} className="addremove-button">
+              {item.completed ? '-' : '+'}
             </button>
           </li>
         ))}
       </ul>
-      {/* Add the "Request" button below the checklist */}
       <button className="ok-button" onClick={handleRequestClick}>
         Ok
       </button>
