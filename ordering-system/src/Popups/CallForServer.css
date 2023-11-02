@@ -1,0 +1,49 @@
+.checklist {
+  width: 300px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ccc;
+  margin: 5px 0;
+  padding: 10px;
+}
+
+li.completed {
+  background-color: #c0ffc0;
+  text-decoration: none;
+}
+
+button {
+  background-color: #007acc;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056a4;
+}
+
+.ok-button {
+  background-color: #007acc;
+  width: 300px;
+  color: white;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.request-button:hover {
+  background-color: #0056a4;
+}
