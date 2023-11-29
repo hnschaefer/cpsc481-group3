@@ -1,7 +1,4 @@
-import { useState } from "react";
 import "./OrderAlert.css";
-import Button from "react-bootstrap/Button";
-import Image from "react-bootstrap/Image";
 import Navbar from "./Navbar"; // Import the Navbar component
 
 function OrderAlert({ item, onClose }) {
@@ -21,7 +18,7 @@ function OrderAlert({ item, onClose }) {
             <p>Click here to make a new selection</p>
           </div>
           <div className="box">
-          <p>We are sorry for any inconvenience 😞</p>
+            <p>We are sorry for any inconvenience 😞</p>
             {/* Use the HTML entity &#128532; for a sad face */}
           </div>
           <button onClick={onClose} className="close-button">
