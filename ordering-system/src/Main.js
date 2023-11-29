@@ -3,15 +3,15 @@ import Menu from "../src/Menu Pages/Menu";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Cart from "./Cart";
-import Description from "./App";
+import DetailedItem from "./DetailedItem";
 
 function Main() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/Description" index element={<Description />} />
+        <Route path="/DetailedItem" index element={<DetailedItem />} />
         <Route path="/Menu" index element={<Menu />} />
-        <Route index element={<Cart />} />
+        <Route path="/Cart" index element={<Cart />} />
       </Routes>
     </BrowserRouter>
   );
