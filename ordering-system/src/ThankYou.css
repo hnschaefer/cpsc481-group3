@@ -1,0 +1,10 @@
+.box {
+    justify-content: center;
+    background-color: #f7c97c;
+    height: 450px;
+    width: 1000px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+  }
