@@ -124,7 +124,7 @@ function DetailedItem() {
               verticalAlign: "middle",
             }}
           >
-            Add To Order
+            Add To Cart
           </span>
           <Image
             src={cartplus}
