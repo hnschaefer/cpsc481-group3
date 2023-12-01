@@ -7,7 +7,7 @@ import send from ".//icons/icons/send.svg";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Button from "react-bootstrap/Button";
 import Image from "react-bootstrap/Image";
-import Navbar from "./Navbar";
+import ReturnToMenuNavbar from "./ReturnToMenuNavbar";
 
 function Cart() {
   return (
@@ -19,7 +19,7 @@ function Cart() {
           paddingBottom: 20,
         }}
       >
-        <Navbar />
+        <ReturnToMenuNavbar />
       </div>
       <br></br>
       <table style={{ marginLeft: "auto", marginRight: "auto" }}>

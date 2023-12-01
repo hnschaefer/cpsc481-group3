@@ -4,7 +4,7 @@ import burger from "./images/impossibleburger.jpg";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Button from "react-bootstrap/Button";
 import Image from "react-bootstrap/Image";
-import Navbar from "./Navbar";
+import ReturnToMenuNavbar from "./ReturnToMenuNavbar";
 import StarRating from "./StarRating"; // Import the StarRating component
 
 function Pay() {
@@ -25,7 +25,7 @@ function Pay() {
           paddingBottom: 20,
         }}
       >
-        <Navbar />
+        <ReturnToMenuNavbar />
       </div>
       <br />
       <table style={{ marginLeft: "auto", marginRight: "auto" }}>

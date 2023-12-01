@@ -8,7 +8,7 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Image from "react-bootstrap/Image";
 import Row from "react-bootstrap/Row";
-import Navbar from "./Navbar";
+import ReturnToMenuNavbar from "./ReturnToMenuNavbar";
 
 function DetailedItem() {
   return (
@@ -20,7 +20,7 @@ function DetailedItem() {
           paddingBottom: 20,
         }}
       >
-        <Navbar />
+        <ReturnToMenuNavbar />
       </div>
       <br></br>
       <Container>

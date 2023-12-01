@@ -1,62 +1,60 @@
 /* OrderAlert.css */
 .order-alert-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .order-alert {
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .order-alert-content {
-    text-align: center;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
-  .spacer {
-    height: 100px; 
-  }
-  
-  .red-text {
-    color: red;
-  }
+.order-alert {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .disclaimer {
-    font-size: 24px; /* Increase the font size */
-    font-weight: bold; /* Make the text bold */
-    color: red; /* Keep the text color as red */
-    text-align: center;
-  }
-  
-  .box {
-    background-color: grey;
-    color: white;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 5px;
-  }
+.order-alert-content {
+  text-align: center;
+}
 
-  .border-box {
-    border: 5px solid grey;
-    padding: 15px;
-    border-radius: 5px;
-    text-align: center;
-  }
-  
-  button.close-button {
-    background-color: grey;
-    color: white;
-    padding: 10px 20px;
-    margin: 10px;
-    border: 2px solid #f7c97c;
-    cursor: pointer;
-  }
-  
+.spacer {
+  height: 100px;
+}
+
+.red-text {
+  color: red;
+}
+
+.disclaimer {
+  font-size: 24px; /* Increase the font size */
+  font-weight: bold; /* Make the text bold */
+  color: red; /* Keep the text color as red */
+  text-align: center;
+}
+
+.box {
+  background-color: grey;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.border-box {
+  border: 5px solid grey;
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+button.close-button {
+  background-color: grey;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px;
+  border: 2px solid #f7c97c;
+  cursor: pointer;
+}

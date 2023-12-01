@@ -6,6 +6,7 @@ import Features from "./ItemDisplay.js";
 import Navbar from "../Navbar";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
+import Button from "react-bootstrap/esm/Button.js";
 
 function Menu() {
   const slideLeft = () => {
@@ -50,7 +51,8 @@ function Menu() {
             className="w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide"
           >
             {data.map((menu) => (
-              <button
+              <Button
+                class="btn btn-dark"
                 style={{
                   display: "inline-block",
                   fontSize: 40,
@@ -62,7 +64,7 @@ function Menu() {
                 }}
               >
                 {menu.item}
-              </button>
+              </Button>
             ))}
           </div>
           <MdChevronRight onClick={slideRight} size={40} />

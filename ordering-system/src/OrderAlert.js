@@ -1,3 +1,4 @@
+// OrderAlert.js
 import "./OrderAlert.css";
 import Navbar from "./Navbar"; // Import the Navbar component
 
