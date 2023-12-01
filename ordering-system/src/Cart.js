@@ -1,7 +1,7 @@
 import "./Cart.css";
 import spaghetti from ".//images/danijela-prijovic-qits91IZv1o-unsplash.jpg";
-import food from ".//images/aperolspritz.jpg";
-import remove from ".//icons/icons/cart-x-fill.svg";
+import food from ".//images/chickenwings.jpg";
+import remove from ".//icons/icons/x-lg.svg";
 import edit from ".//icons/icons/pencil-square.svg";
 import send from ".//icons/icons/send.svg";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
@@ -22,7 +22,7 @@ function Cart() {
         <Navbar />
       </div>
       <br></br>
-      <table style={{ marginLeft: "auto", marginRight: "auto" }}>
+      <table style={{ textAlign: "center", marginLeft: "auto", marginRight: "auto" }}>
         <tr>
           <td>
             <h1 style={{ fontSize: 50, fontWeight: "bold" }}>Items</h1>
@@ -31,7 +31,7 @@ function Cart() {
             <h1 style={{ fontSize: 50, fontWeight: "bold" }}>Quantity</h1>
           </td>
           <td>
-            <h1 style={{ fontSize: 50, fontWeight: "bold" }}>Edit/Remove</h1>
+            <h1 style={{ fontSize: 50, fontWeight: "bold" }}>Modify</h1>
           </td>
         </tr>
         <tr>
@@ -39,7 +39,7 @@ function Cart() {
             <Image
               src={spaghetti}
               rounded
-              style={{ width: "240px", height: "200px" }}
+              style={{ marginLeft: "auto", marginRight: "auto", width: "240px", height: "200px" }}
             />
             <p style={{ fontSize: "35px" }}>Spaghetti Portofino $28</p>
           </td>
@@ -93,30 +93,42 @@ function Cart() {
                 backgroundColor: "#414042",
                 marginRight: "10px",
                 marginLeft: "35px",
+                fontSize: 35,
+                verticalAlign: "middle",
               }}
-            >
+            > Edit
               <Image
                 src={edit}
                 rounded
                 style={{
-                  width: "60px",
-                  height: "60px",
+                  width: "40px",
+                  height: "40px",
                   filter: "invert(100%)",
+                  display: "inline-block",
+                  marginLeft: 20,
                 }}
               />
             </Button>
             <Button
               variant="dark"
               size="lg"
-              style={{ backgroundColor: "#414042" }}
-            >
+              style={{
+                backgroundColor: "#414042",
+                marginRight: "10px",
+                marginLeft: "35px",
+                fontSize: 35,
+                verticalAlign: "middle",
+              }}
+            > Remove
               <Image
                 src={remove}
                 rounded
                 style={{
-                  width: "60px",
-                  height: "60px",
+                  width: "40px",
+                  height: "40px",
                   filter: "invert(100%)",
+                  display: "inline-block",
+                  marginLeft: 20,
                 }}
               />
             </Button>
@@ -127,7 +139,7 @@ function Cart() {
             <Image
               src={food}
               rounded
-              style={{ width: "240px", height: "200px" }}
+              style={{ marginLeft: "auto", marginRight: "auto", width: "240px", height: "200px" }}
             />
             <p style={{ fontSize: "35px" }}>Chicken Wings $19</p>
           </td>
@@ -166,36 +178,48 @@ function Cart() {
           </td>
           <td>
             <Button
+                variant="dark"
+                size="lg"
+                style={{
+                  backgroundColor: "#414042",
+                  marginRight: "10px",
+                  marginLeft: "35px",
+                  fontSize: 35,
+                  verticalAlign: "middle",
+                }}
+              > Edit
+                <Image
+                  src={edit}
+                  rounded
+                  style={{
+                    width: "40px",
+                    height: "40px",
+                    filter: "invert(100%)",
+                    display: "inline-block",
+                    marginLeft: 20,
+                  }}
+                />
+              </Button>
+              <Button
               variant="dark"
               size="lg"
               style={{
                 backgroundColor: "#414042",
                 marginRight: "10px",
                 marginLeft: "35px",
+                fontSize: 35,
+                verticalAlign: "middle",
               }}
-            >
-              <Image
-                src={edit}
-                rounded
-                style={{
-                  width: "60px",
-                  height: "60px",
-                  filter: "invert(100%)",
-                }}
-              />
-            </Button>
-            <Button
-              variant="dark"
-              size="lg"
-              style={{ backgroundColor: "#414042" }}
-            >
+            > Remove
               <Image
                 src={remove}
                 rounded
                 style={{
-                  width: "60px",
-                  height: "60px",
+                  width: "40px",
+                  height: "40px",
                   filter: "invert(100%)",
+                  display: "inline-block",
+                  marginLeft: 20,
                 }}
               />
             </Button>
