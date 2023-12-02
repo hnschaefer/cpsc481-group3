@@ -1,60 +1,40 @@
-/* OrderAlert.css */
-.order-alert-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.order-alert {
-  background-color: white;
-  padding: 20px;
-  border-radius: 5px;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.order-alert-content {
+.alert-container {
+  width: 30%;
+  height: 50vh;
+  margin-left: 33%;
+  margin-top: 5%;
+  background-color: whitesmoke;
+  overflow-wrap: break-word;
+  border: 2px solid black;
   text-align: center;
-}
-
-.spacer {
-  height: 100px;
-}
-
-.red-text {
-  color: red;
 }
 
 .disclaimer {
-  font-size: 24px; /* Increase the font size */
-  font-weight: bold; /* Make the text bold */
-  color: red; /* Keep the text color as red */
-  text-align: center;
+  color: red;
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 40px;
 }
 
-.box {
-  background-color: grey;
+.text {
+  font-size: 20px;
+  margin-top: 50px;
+}
+
+.texttwo {
+  font-size: 20px;
+  margin-top: 40px;
+}
+
+.textthree {
+  font-size: 20px;
+  margin-top: 40px;
+}
+
+.close {
+  background-color: #414042;
   color: white;
-  padding: 10px;
-  margin: 10px;
-  border-radius: 5px;
-}
-
-.border-box {
-  border: 5px solid grey;
-  padding: 15px;
-  border-radius: 5px;
-  text-align: center;
-}
-
-button.close-button {
-  background-color: grey;
-  color: white;
-  padding: 10px 20px;
-  margin: 10px;
-  border: 2px solid #f7c97c;
-  cursor: pointer;
+  margin-top: 40px;
+  height: 10%;
+  width: 20%;
 }
