@@ -8,6 +8,8 @@ function CallForServer() {
     { id: 3, text: 'Water', completed: false },
   ]);
 
+  const [showMessage, setShowMessage] = useState(false);
+
   const toggleItemCompletion = (id) => {
     setItems((prevItems) =>
       prevItems.map((item) =>
@@ -17,27 +19,36 @@ function CallForServer() {
   };
 
   const handleRequestClick = () => {
-    alert('The server is on their way!');
     setItems((prevItems) =>
-    prevItems.map((item) => ({ ...item, completed: false }))
-  );
+      prevItems.map((item) => ({ ...item, completed: false }))
+    );
+
+    setShowMessage(true);
+
+    setTimeout(() => {
+      setShowMessage(false);
+    }, 4000);
   };
 
   return (
     <div className="checklist">
-      <ul>
-        {items.map((item) => (
-          <li key={item.id} className={item.completed ? 'completed' : ''}>
-            {item.text}
-            <button onClick={() => toggleItemCompletion(item.id)} className="addremove-button">
-              {item.completed ? '-' : '+'}
-            </button>
-          </li>
-        ))}
-      </ul>
-      <button className="ok-button" onClick={handleRequestClick}>
-        Ok
-      </button>
+      {showMessage ? (
+        <div>The server is on their way</div>
+      ) : (
+        <ul>
+          {items.map((item) => (
+            <li key={item.id} className={item.completed ? 'completed' : ''}>
+              {item.text}
+              <button onClick={() => toggleItemCompletion(item.id)} className="addremove-button">
+                {item.completed ? '-' : '+'}
+              </button>
+            </li>
+          ))}
+          <button className="ok-button" onClick={handleRequestClick}>
+            Ok
+          </button>
+        </ul>
+      )}
     </div>
   );
 }
