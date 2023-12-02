@@ -17,7 +17,6 @@ function Pay() {
 
   return (
     <div className="Cart">
-      <br />
       <div
         style={{
           backgroundColor: "#414042",

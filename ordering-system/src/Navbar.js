@@ -3,7 +3,17 @@ import cart from ".//icons/icons/cart-fill.svg";
 import person from ".//icons/icons/person-fill.svg";
 import cash from ".//icons/icons/cash-coin.svg";
 import Image from "react-bootstrap/Image";
+import { useNavigate } from "react-router-dom";
+
 const Navbar = () => {
+  const navigate = useNavigate();
+  function navbarButtonPress(value) {
+    if (value === "cart") {
+      navigate("/Cart");
+    } else if (value === "pay") {
+      navigate("/Pay");
+    }
+  }
   return (
     <div
       style={{
@@ -26,6 +36,7 @@ const Navbar = () => {
           borderRadius: 0,
           fontSize: 35,
         }}
+        onClick={() => navbarButtonPress("cart")}
       >
         Order Cart
         <Image
@@ -81,6 +92,7 @@ const Navbar = () => {
           borderRadius: 0,
           fontSize: 35,
         }}
+        onClick={() => navbarButtonPress("pay")}
       >
         Pay For Order{" "}
         <Image

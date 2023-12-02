@@ -4,7 +4,20 @@ import person from ".//icons/icons/person-fill.svg";
 import cash from ".//icons/icons/cash-coin.svg";
 import leftarrow from ".//icons/icons/caret-left-fill.svg";
 import Image from "react-bootstrap/Image";
+import { useNavigate } from "react-router-dom";
 const ReturnToMenuNavbar = () => {
+  const navigate = useNavigate();
+
+  function navbarButtonPress(value) {
+    if (value === "cart") {
+      navigate("/Cart");
+    } else if (value === "pay") {
+      navigate("/Pay");
+    } else if (value === "menu") {
+      navigate("/Menu");
+    }
+  }
+
   return (
     <div style={{ width: "100%" }}>
       <Button
@@ -20,6 +33,7 @@ const ReturnToMenuNavbar = () => {
           height: "100px",
           fontSize: "35px",
         }}
+        onClick={() => navbarButtonPress("menu")}
       >
         <Image
           src={leftarrow}
@@ -49,6 +63,7 @@ const ReturnToMenuNavbar = () => {
           height: "100px",
           fontSize: "35px",
         }}
+        onClick={() => navbarButtonPress("cart")}
       >
         <span style={{ margin: "0 10px", verticalAlign: "middle" }}>
           Order Cart
@@ -107,6 +122,7 @@ const ReturnToMenuNavbar = () => {
           height: "100px",
           fontSize: "35px",
         }}
+        onClick={() => navbarButtonPress("pay")}
       >
         <span style={{ margin: "0 10px", verticalAlign: "middle" }}>
           Pay For Order
