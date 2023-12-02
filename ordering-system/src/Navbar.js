@@ -1,19 +1,34 @@
+import React, { useState, useEffect } from "react";
 import Button from "react-bootstrap/Button";
+import Image from "react-bootstrap/Image";
 import cart from ".//icons/icons/cart-fill.svg";
 import person from ".//icons/icons/person-fill.svg";
 import cash from ".//icons/icons/cash-coin.svg";
-import Image from "react-bootstrap/Image";
 import { useNavigate } from "react-router-dom";
+import CallForServer from "./CallForServer";
 
 const Navbar = () => {
   const navigate = useNavigate();
+  const [serverCall, setServerCall] = useState(false);
+
+  useEffect(() => {
+    if (serverCall) {
+      setTimeout(() => {
+        setServerCall(false);
+      }, 30000);
+    }
+  }, [serverCall]);
+
   function navbarButtonPress(value) {
     if (value === "cart") {
       navigate("/Cart");
     } else if (value === "pay") {
       navigate("/Pay");
+    } else if (value === "call") {
+      setServerCall(true);
     }
   }
+
   return (
     <div
       style={{
@@ -64,6 +79,7 @@ const Navbar = () => {
           borderRadius: 0,
           fontSize: 35,
         }}
+        onClick={() => navbarButtonPress("call")}
       >
         Call For Server{" "}
         <Image
@@ -78,6 +94,7 @@ const Navbar = () => {
           }}
         />
       </Button>{" "}
+      {serverCall && <CallForServer />}
       <Button
         variant="dark"
         size="lg"

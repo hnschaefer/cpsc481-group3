@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import Button from "react-bootstrap/Button";
 import cart from ".//icons/icons/cart-fill.svg";
 import person from ".//icons/icons/person-fill.svg";
@@ -5,8 +6,18 @@ import cash from ".//icons/icons/cash-coin.svg";
 import leftarrow from ".//icons/icons/caret-left-fill.svg";
 import Image from "react-bootstrap/Image";
 import { useNavigate } from "react-router-dom";
+import CallForServer from "./CallForServer";
 const ReturnToMenuNavbar = () => {
   const navigate = useNavigate();
+  const [serverCall, setServerCall] = useState(false);
+
+  useEffect(() => {
+    if (serverCall) {
+      setTimeout(() => {
+        setServerCall(false);
+      }, 30000);
+    }
+  }, [serverCall]);
 
   function navbarButtonPress(value) {
     if (value === "cart") {
@@ -15,6 +26,8 @@ const ReturnToMenuNavbar = () => {
       navigate("/Pay");
     } else if (value === "menu") {
       navigate("/Menu");
+    } else if (value === "call") {
+      setServerCall(true);
     }
   }
 
@@ -93,6 +106,7 @@ const ReturnToMenuNavbar = () => {
           height: "100px",
           fontSize: "35px",
         }}
+        onClick={() => navbarButtonPress("call")}
       >
         <span style={{ margin: "0 10px", verticalAlign: "middle" }}>
           Call For Server
@@ -108,7 +122,8 @@ const ReturnToMenuNavbar = () => {
             marginLeft: 20,
           }}
         />
-      </Button>{" "}
+      </Button>
+      {serverCall && <CallForServer />}
       <Button
         variant="dark"
         size="lg"
