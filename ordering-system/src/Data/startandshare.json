@@ -5,7 +5,7 @@
     "price": 21.25,
     "image": "tunastack",
     "desc": "Ocean wise ahi, citrus tamari vinaigrette, nori, sesame, avocado, microgreens, wonton crisps",
-    "tags": ""
+    "tags": [""]
   },
   {
     "id": 54,
@@ -13,7 +13,7 @@
     "price": 21.75,
     "image": "beefcarpaccio",
     "desc": "Peppercorn-crusted wagyu beef, bearnaise aioli, capers, arugula, pickled onions, freshly grated horseradish, garlic crostini",
-    "tags": ""
+    "tags": [""]
   },
   {
     "id": 55,
@@ -21,7 +21,7 @@
     "price": 23.25,
     "image": "szechuanwraps",
     "desc": "Sweet and spicy szechuan glaze, peanuts, wontons, korean chili sauce, spicy yogurt",
-    "tags": ""
+    "tags": [""]
   },
   {
     "id": 56,
@@ -29,7 +29,7 @@
     "price": 14.00,
     "image": "avocadodip",
     "desc": "Pico de gallo, feta, chili oil, cilantro, fresh lime",
-    "tags": "Gluten-Free, Vegetarian, Vegan-Friendly"
+    "tags": ["Gluten-Free", "Vegetarian", "Vegan-Friendly"]
   },
   {
     "id": 57,
@@ -37,7 +37,7 @@
     "price": 17.25,
     "image": "minichicken",
     "desc": "Spicy panko-crusted chicken, swiss cheese, sambal mayo, lettuce, tomato, pickle, onion",
-    "tags": ""
+    "tags": [""]
   },
   {
     "id": 58,
@@ -45,7 +45,7 @@
     "price": 12.75,
     "image": "trufflefries",
     "desc": "Truffle, herbs, grana padano, garlic aioli",
-    "tags": "Gluten-Free"
+    "tags": ["Gluten-Free"]
   },
   {
     "id": 59,
@@ -53,7 +53,7 @@
     "price": 19.75,
     "image": "sharecrabcake",
     "desc": "Panko-crusted canadian rock crab, prawn, cucumber, arugula, green goddess dressing",
-    "tags": ""
+    "tags": [""]
   },
   {
     "id": 60,
@@ -61,7 +61,7 @@
     "price": 17.25,
     "image": "miniburg",
     "desc": "Smashed certified angus beef, cheddar, bacon, lettuce, tomato, red pepper relish, dijon mayonnaise",
-    "tags": ""
+    "tags": [""]
   },
   {
     "id": 61,
@@ -69,7 +69,7 @@
     "price": 12.00,
     "image": "yamfries",
     "desc": "Garlic aioli",
-    "tags": "Gluten-Free, Vegetarian, Vegan-Friendly"
+    "tags": ["Gluten-Free", "Vegetarian", "Vegan-Friendly"]
   },
   {
     "id": 62,
@@ -77,7 +77,7 @@
     "price": 18.00,
     "image": "chickenpickle",
     "desc": "Crispy fried chicken, nashville spice, honey, creamy parmesan dip",
-    "tags": "Gluten-Free"
+    "tags": ["Gluten-Free"]
   },
   {
     "id": 63,
@@ -85,7 +85,7 @@
     "price": 19.25,
     "image": "chickenwings",
     "desc": "Salt & pepper or louisiana hot, celery, creamy parmesan dip",
-    "tags": "Gluten-Free"
+    "tags": ["Gluten-Free"]
   },
   {
     "id": 64,
@@ -93,7 +93,7 @@
     "price": 18.25,
     "image": "ravioliprawn",
     "desc": "Chef Rob Feenie’s signature butternut squash and mascarpone ravioli, truffle butter, sautéed prawns, pine nuts, crispy sage",
-    "tags": ""
+    "tags": [""]
   }
   
 ]

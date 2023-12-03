@@ -5,7 +5,7 @@
     "price": 54.75,
     "image": "millionairescut",
     "desc": "White wine sautéed creole prawns, buttered mashed potatoes, seasonal vegetables",
-    "tags": ""
+    "tags": [""]
   },
   {
     "id": 66,
@@ -13,7 +13,7 @@
     "price": 38.75,
     "image": "steakmushroom",
     "desc": "8oz CAB sirloin, grilled oyster mushrooms, button mushrooms, red wine jus, buttered mashed potatoes, seasonal vegetables",
-    "tags": ""
+    "tags": [""]
   },
   {
     "id": 67,
@@ -21,7 +21,7 @@
     "price": 38.75,
     "image": "peppercornsteak",
     "desc": "8oz CAB sirloin, Chef Rob Feenie’s pernod peppercorn demi-glace, buttered mashed potatoes, seasonal vegetables",
-    "tags": "Gluten-Free"
+    "tags": ["Gluten-Free"]
   },
   {
     "id": 68,
@@ -29,7 +29,7 @@
     "price": 33.75,
     "image": "steakfrites",
     "desc": "8oz CAB sirloin, kale salad, horseradish cream, sea salted fries",
-    "tags": ""
+    "tags": [""]
   },
   {
     "id": 69,
@@ -37,7 +37,7 @@
     "price": 44.25,
     "image": "creolesteak",
     "desc": "8oz CAB sirloin, cajun spices, spicy creole butter, white wine sautéed creole prawns, buttered mashed potatoes, seasonal vegetables",
-    "tags": ""
+    "tags": [""]
   },
   {
     "id": 70,
@@ -45,6 +45,6 @@
     "price": 34.75,
     "image": "chargrilledsteak",
     "desc": "8oz CAB sirloin, buttered mashed potatoes, seasonal vegetable",
-    "tags": "Gluten-Free"
+    "tags": ["Gluten-Free"]
   }
 ]

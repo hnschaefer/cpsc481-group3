@@ -5,7 +5,7 @@
     "price": 19.25,
     "image": "salmonaburiroll",
     "desc": "Flame torched ocean wise™ steelhead, mango, avocado, crispy tempura, serrano pepper, soy glaze",
-    "tags": ""
+    "tags": [""]
   },
   {
     "id": 72,
@@ -13,7 +13,7 @@
     "price": 16.25,
     "image": "zenroll",
     "desc": "100% plant-based. yuzu tamari, avocado, mango, sesame soy paper, vegan mayo, soy glaze, crispy taro",
-    "tags": ""
+    "tags": [""]
   },
   {
     "id": 73,
@@ -21,6 +21,6 @@
     "price": 18.75,
     "image": "prawncrunchroll",
     "desc": "Crispy prawn, mango, avocado, sesame soy paper, sriracha mayo, so",
-    "tags": "Gluten-Free, Vegetarian, Vegan-Friendly"
+    "tags": ["Gluten-Free", "Vegetarian", "Vegan-Friendly"]
   }
 ]

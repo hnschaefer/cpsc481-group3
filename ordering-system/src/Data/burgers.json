@@ -5,7 +5,7 @@
     "price": 24.75,
     "image": "feenieburger",
     "desc": "Smashed certified angus beef, sautéed mushrooms, aged cheddar, smoked bacon, red relish, mayonnaise, ketchup, mustard, sea salted fries",
-    "tags": ""
+    "tags": [""]
   },
   {
     "id": 20,
@@ -13,7 +13,7 @@
     "price": 21.75,
     "image": "gardenburger",
     "desc": "Aged cheddar, red relish, mayonnaise, ketchup, mustard, brioche bun, sea salted fries",
-    "tags": "Vegetarian"
+    "tags": ["Vegetarian"]
   },
   {
     "id": 21,
@@ -21,7 +21,7 @@
     "price": 23.75,
     "image": "cheddarbaconburger",
     "desc": "Smashed certified angus beef, aged cheddar, smoked bacon, red relish, mayonnaise, ketchup, mustard, sea salted fries",
-    "tags": ""
+    "tags": [""]
   },
   {
     "id": 22,
@@ -29,6 +29,6 @@
     "price": 23.25,
     "image": "impossibleburger",
     "desc": "Impossible plant-based patty, red relish, vegan mayo, ketchup, mustard, vegan bun, sea salted fries",
-    "tags": "Vegan-Friendly"
+    "tags": ["Vegan-Friendly"]
   }
 ]

@@ -5,7 +5,7 @@
     "price": 31.00,
     "image": "truffle",
     "desc": "Parmesan crusted chicken breast, roasted and grilled mushrooms, potato gnocchi, truffle mushroom cream sauce, arugula",
-    "tags": "Gluten-Free"
+    "tags": ["Gluten-Free"]
   },
   {
     "id": 36,
@@ -13,7 +13,7 @@
     "price": 26.75,
     "image": "portofino",
     "desc": "Sautéed prawns, lobster lemon butter sauce, roasted gem tomatoes, corn, fennel chili crumb, garlic crostini",
-    "tags": ""
+    "tags": [""]
   },
   {
     "id": 37,
@@ -21,7 +21,7 @@
     "price": 29.75,
     "image": "creole",
     "desc": "Creole butter, cajun spices, buttered mashed potatoes, seasonal vegetables",
-    "tags": ""
+    "tags": [""]
   },
   {
     "id": 38,
@@ -29,7 +29,7 @@
     "price": 33.00,
     "image": "crabcake",
     "desc": "Panko-crusted canadian crab & prawn cakes, tartar sauce, kale salad, sea salted fries",
-    "tags": ""
+    "tags": [""]
   },
   {
     "id": 39,
@@ -37,7 +37,7 @@
     "price": 24.75,
     "image": "rigatoni",
     "desc": "Truffled pecorino, slow cooked beef and pork ragu, rosemary, fennel chili crumb, garlic crostini",
-    "tags": ""
+    "tags": [""]
   },
   {
     "id": 40,
@@ -45,7 +45,7 @@
     "price": 31.75,
     "image": "salmon",
     "desc": "Ocean wise steelhead, buttered mashed potatoes, seasonal vegetables, soy-dijon butter sauce, cilantro",
-    "tags": ""
+    "tags": [""]
   },
   {
     "id": 41,
@@ -53,7 +53,7 @@
     "price": 24.75,
     "image": "thai",
     "desc": "Coconut green curry, jasmine rice, bok choy, spinach, peppers, bean sprouts, thai basil, cilantro, crispy rice",
-    "tags": "Gluten-Free"
+    "tags": ["Gluten-Free"]
   },
   {
     "id": 42,
@@ -61,6 +61,6 @@
     "price": 30.75,
     "image": "butternut",
     "desc": "Chef Rob Feenie’s signature butternut squash and mascarpone ravioli, truffle butter, sautéed prawns, pine nuts, crispy sage",
-    "tags": ""
+    "tags": [""]
   }
 ]

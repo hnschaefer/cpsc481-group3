@@ -19,6 +19,7 @@ function Menu() {
   };
 
   const [pageStatus, setPageStatus] = useState("Features");
+  const [filter, setFilter] = useState("");
 
   return (
     <div style={{ display: "flex", flexDirection: "column" }}>
@@ -85,14 +86,16 @@ function Menu() {
           id="dropdown-basic-button"
           title="Filter"
           variant="secondary"
+          onSelect={(eventKey) => setFilter(eventKey)}
         >
-          <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-          <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-          <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+          <Dropdown.Item eventKey="Vegan-friendly">Vegan-friendly</Dropdown.Item>
+          <Dropdown.Item eventKey="Vegetarian">Vegetarian</Dropdown.Item>
+          <Dropdown.Item eventKey="Gluten-Free">Gluten-Free</Dropdown.Item>
+          <Dropdown.Item eventKey="">Clear Filter</Dropdown.Item>
         </DropdownButton>
       </h1>
       <div style={{ paddingTop: 30 }}>
-        <Features status={pageStatus} />
+        <Features status={pageStatus} filter={filter} />
       </div>
     </div>
   );

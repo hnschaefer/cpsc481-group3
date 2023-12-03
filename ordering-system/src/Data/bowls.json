@@ -5,7 +5,7 @@
     "price": 24.75,
     "image": "medbowl",
     "desc": "Turmeric rice, beetroot hummus, kale, cucumber, red onion, tomatoes, macedonian feta, kalamata olives, yogurt, pickled red cabbage",
-    "tags": "Gluten-Free"
+    "tags": ["Gluten-Free"]
   },
   {
     "id": 16,
@@ -13,7 +13,7 @@
     "price": 24.00,
     "image": "crispytofubowl",
     "desc": "100% plant-based. soy chili tofu, jasmine rice, mango, cucumber, avocado, edamame, ginger, radish",
-    "tags": "Gluten-Free, Vegan-Friendly"
+    "tags": ["Gluten-Free", "Vegan-Friendly"]
   },
   {
     "id": 17,
@@ -21,7 +21,7 @@
     "price": 25.75,
     "image": "tunapokebowl",
     "desc": "Sesame ginger ocean wise™ ahi, jasmine rice, mango, cucumber, avocado, edamame, ginger, radish, crispy tempura",
-    "tags": ""
+    "tags": [""]
   },
   {
     "id": 18,
@@ -29,6 +29,6 @@
     "price": 23.00,
     "image": "chickenricebowl",
     "desc": "Peppers, broccoli, red cabbage, bean sprouts, spicy yogurt",
-    "tags": ""
+    "tags": [""]
   }
 ]

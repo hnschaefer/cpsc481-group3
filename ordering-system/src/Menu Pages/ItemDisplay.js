@@ -17,28 +17,58 @@ import { useSelector } from "react-redux";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 
 const Features = (props) => {
-  const status = props.status;
+  const { status, filter } = props;
   var renderData = "";
   if (status === "Features") {
     renderData = featuredata;
+    if(filter){
+      renderData = renderData.filter(item => item.tags.includes(filter));
+    }
   } else if (status === "Mains") {
     renderData = mainsdata;
+    if(filter){
+      renderData = renderData.filter(item => item.tags.includes(filter));
+    }
   } else if (status === "Start + Share") {
     renderData = startandsharedata;
+    if(filter){
+      renderData = renderData.filter(item => item.tags.includes(filter));
+    }
   } else if (status === "Bowls") {
     renderData = bowlsdata;
+    if(filter){
+      renderData = renderData.filter(item => item.tags.includes(filter));
+    }
   } else if (status === "Greens") {
     renderData = greensdata;
+    if(filter){
+      renderData = renderData.filter(item => item.tags.includes(filter));
+    }
   } else if (status === "Sushi") {
     renderData = sushidata;
+    if(filter){
+      renderData = renderData.filter(item => item.tags.includes(filter));
+    }
   } else if (status === "Burgers") {
     renderData = burgersdata;
+    if(filter){
+      renderData = renderData.filter(item => item.tags.includes(filter));
+    }
   } else if (status === "Steaks") {
     renderData = steaksdata;
+    if(filter){
+      renderData = renderData.filter(item => item.tags.includes(filter));
+    }
   } else if (status === "Desserts") {
     renderData = dessertsdata;
+    if(filter){
+      renderData = renderData.filter(item => item.tags.includes(filter));
+    }
   } else if (status === "Beverages") {
     renderData = beveragesdata;
+    if(filter){
+      renderData = renderData.filter(item => item.tags.includes(filter));
+    }
   }
 
   const navigate = useNavigate();
