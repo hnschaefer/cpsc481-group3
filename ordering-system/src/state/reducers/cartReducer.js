@@ -27,7 +27,39 @@ const cartReducer = (state = initialState, action) => {
         ...state,
       };
 
-    case "remove":
+    case "lower":
+      const updateItem = action.payload;
+      const itemIndexToUpdate = state.cartItems.findIndex(
+        (item) => item.name === updateItem
+      );
+
+      if (itemIndexToUpdate !== -1) {
+        state.cartItems[itemIndexToUpdate].quantity =
+          state.cartItems[itemIndexToUpdate].quantity > 1
+            ? state.cartItems[itemIndexToUpdate].quantity - 1
+            : 1;
+      }
+      console.log(state.cartItems[itemIndexToUpdate].quantity);
+      return {
+        ...state,
+      };
+
+    case "higher":
+      const higherItem = action.payload;
+      const itemIndexToUpdateHigher = state.cartItems.findIndex(
+        (item) => item.name === higherItem
+      );
+
+      if (itemIndexToUpdateHigher !== -1) {
+        state.cartItems[itemIndexToUpdateHigher].quantity =
+          state.cartItems[itemIndexToUpdateHigher].quantity < 9
+            ? state.cartItems[itemIndexToUpdateHigher].quantity + 1
+            : 9;
+      }
+      console.log(state.cartItems[itemIndexToUpdateHigher].quantity);
+      return {
+        ...state,
+      };
 
     default:
       return state;

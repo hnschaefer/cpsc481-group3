@@ -6,12 +6,28 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Button from "react-bootstrap/Button";
 import Image from "react-bootstrap/Image";
 import ReturnToMenuNavbar from "./ReturnToMenuNavbar";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { actionCreators } from "./state/actionimp";
+import { bindActionCreators } from "redux";
 import { useState } from "react";
 
 function Cart() {
   const state = useSelector((state) => state);
   const [contents, setContents] = useState(state.cart.cartItems);
+  const dispatch = useDispatch();
+  const { lowerCart, higherCart } = bindActionCreators(
+    actionCreators,
+    dispatch
+  );
+
+  const lowerQuant = (item) => {
+    lowerCart(item);
+  };
+
+  const higherQuant = (item) => {
+    higherCart(item);
+  };
+
   console.log(contents);
   return (
     <div className="Cart">
@@ -66,7 +82,9 @@ function Cart() {
                     margin: "0 10px",
                     alignItems: "center",
                     justifyContent: "center",
+                    border: "2px solid black",
                   }}
+                  onClick={() => lowerQuant(item.name)}
                 >
                   <span style={{ fontSize: "40px" }}>-</span>
                 </Button>
@@ -82,7 +100,13 @@ function Cart() {
                 <Button
                   variant="light"
                   size="lg"
-                  style={{ marginRight: "10px", width: "60px", height: "80px" }}
+                  style={{
+                    marginRight: "10px",
+                    width: "60px",
+                    height: "80px",
+                    border: "2px solid black",
+                  }}
+                  onClick={() => higherQuant(item.name)}
                 >
                   <span style={{ fontSize: "40px" }}>+</span>
                 </Button>
