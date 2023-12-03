@@ -60,6 +60,15 @@ const cartReducer = (state = initialState, action) => {
       return {
         ...state,
       };
+    case "overwritenote":
+      const newNote = action.payload;
+      const noteIndex = state.cartItems.findIndex(
+        (item) => item.name === newNote.name
+      );
+      state.cartItems[noteIndex].note = newNote.note;
+      return {
+        ...state,
+      };
 
     default:
       return state;

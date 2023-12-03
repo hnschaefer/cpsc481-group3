@@ -19,3 +19,10 @@ export const higherCart = (item) => {
     payload: item,
   };
 };
+
+export const updateNote = (item) => {
+  return {
+    type: "overwritenote",
+    payload: item,
+  };
+};

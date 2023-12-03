@@ -1,21 +1,25 @@
+import React, { useState } from "react";
+import Modal from "react-bootstrap/Modal";
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
 import "./Cart.css";
 import remove from ".//icons/icons/cart-x-fill.svg";
 import edit from ".//icons/icons/pencil-square.svg";
 import send from ".//icons/icons/send.svg";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import Button from "react-bootstrap/Button";
 import Image from "react-bootstrap/Image";
 import ReturnToMenuNavbar from "./ReturnToMenuNavbar";
 import { useSelector, useDispatch } from "react-redux";
 import { actionCreators } from "./state/actionimp";
 import { bindActionCreators } from "redux";
-import { useState } from "react";
 
 function Cart() {
   const state = useSelector((state) => state);
   const [contents, setContents] = useState(state.cart.cartItems);
+  const [selectedItem, setSelectedItem] = useState(null);
+  const [showModal, setShowModal] = useState(false);
   const dispatch = useDispatch();
-  const { lowerCart, higherCart } = bindActionCreators(
+  const { lowerCart, higherCart, updateNote } = bindActionCreators(
     actionCreators,
     dispatch
   );
@@ -28,7 +32,24 @@ function Cart() {
     higherCart(item);
   };
 
-  console.log(contents);
+  const handleEditClick = (item) => {
+    setSelectedItem(item);
+    setShowModal(true);
+  };
+
+  const handleModalClose = () => {
+    setShowModal(false);
+  };
+
+  const handleSaveNote = () => {
+    // Perform any logic to save the updated note to the Redux store
+    // For now, just close the modal
+    console.log(selectedItem);
+    const note = { name: selectedItem.name, note: selectedItem.note };
+    updateNote(note);
+    setShowModal(false);
+  };
+
   return (
     <div className="Cart">
       <div
@@ -56,11 +77,8 @@ function Cart() {
             <h1 style={{ fontSize: 50, fontWeight: "bold" }}>Edit/Remove</h1>
           </td>
         </tr>
-        {/* {state.cart.cartItems.map((item) => {
-          <CartList item={item} />;
-        })} */}
         {contents.map((item) => (
-          <tr>
+          <tr key={item.name}>
             <td style={{ paddingTop: 50 }}>
               <Image
                 src={require("./images/" + item.image + ".jpg")}
@@ -124,6 +142,7 @@ function Cart() {
                   marginRight: "10px",
                   marginLeft: "35px",
                 }}
+                onClick={() => handleEditClick(item)}
               >
                 <Image
                   src={edit}
@@ -154,6 +173,41 @@ function Cart() {
           </tr>
         ))}
       </table>
+
+      <Modal show={showModal} onHide={handleModalClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Edit Note</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Form.Control
+            as="textarea"
+            rows={3}
+            value={selectedItem?.note}
+            onChange={(e) => {
+              setSelectedItem((prev) => ({ ...prev, note: e.target.value }));
+            }}
+          />
+        </Modal.Body>
+        <Modal.Footer>
+          <Button
+            variant="danger"
+            size="lg"
+            style={{ backgroundColor: "#bb2d3b" }}
+            onClick={handleModalClose}
+          >
+            Close
+          </Button>
+          <Button
+            variant="dark"
+            size="lg"
+            style={{ backgroundColor: "#414042" }}
+            onClick={() => handleSaveNote(selectedItem)}
+          >
+            Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
+
       <div class="d-flex justify-content-center">
         <Button
           variant="dark"
