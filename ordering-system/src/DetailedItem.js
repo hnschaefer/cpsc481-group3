@@ -1,4 +1,6 @@
-import spaghetti from ".//images/danijela-prijovic-qits91IZv1o-unsplash.jpg";
+// DetailedItem.jsx
+
+import React, { useState } from "react";
 import "./DetailedItem.css";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import cartplus from ".//icons/icons/cart-plus-fill.svg";
@@ -9,10 +11,84 @@ import Container from "react-bootstrap/Container";
 import Image from "react-bootstrap/Image";
 import Row from "react-bootstrap/Row";
 import ReturnToMenuNavbar from "./ReturnToMenuNavbar";
+import { useLocation } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { bindActionCreators } from "redux";
+import { actionCreators } from "./state/actionimp";
+import { useNavigate } from "react-router-dom";
 
 function DetailedItem() {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const [count, setCount] = useState(1);
+  const [note, setNote] = useState("");
+  const customize = [
+    "Substitute Salmon - $4",
+    "Substitute Chicken - $4",
+    "Substitute Prawns - $4",
+  ];
+  const { name, price, image, desc, tags } = location.state || {};
+
+  const cartdetails = {
+    name: name,
+    quantity: count,
+    itemPrice: price,
+    note: note,
+    image: image,
+  };
+
+  const state = useSelector((state) => state);
+  const dispatch = useDispatch();
+  const { addToCart } = bindActionCreators(actionCreators, dispatch);
+
+  const isProteinOptionsAvailable = [
+    "Raincoast Greens",
+    "Avocado Kale Salad",
+    "Thai Green Curry",
+    "Chargrilled Steak",
+    "The Med Bowl",
+  ].includes(name);
+
+  const proteinAvailable = [
+    "Raincoast Greens",
+    "Avocado Kale Salad",
+    "Thai Green Curry",
+    "Chargrilled Steak",
+    "The Med Bowl",
+  ].includes(name);
+
+  const [selectedProtein, setSelectedProtein] = useState("");
+
+  const handleProteinChange = (event) => {
+    setSelectedProtein(event.target.checked ? event.target.id : "");
+  };
+
+  const handleIncrement = () => {
+    if (count < 10) {
+      setCount(count + 1);
+      cartdetails.quantity = count;
+    }
+  };
+
+  const handleDecrement = () => {
+    if (count > 1) {
+      setCount(count - 1);
+      cartdetails.quantity = count;
+    }
+  };
+
+  const returnToPage = () => {
+    addToCart(cartdetails);
+    navigate("/Menu");
+  };
+
+  const handleNote = (event) => {
+    setNote(event.target.value);
+  };
+
   return (
     <div className="DetailedItem">
+      {console.log(state)}
       <div
         style={{
           backgroundColor: "#414042",
@@ -26,17 +102,14 @@ function DetailedItem() {
       <Container>
         <Row>
           <Col md={6}>
-            <h1 style={{ fontSize: 50, fontWeight: "bold" }}>
-              Spaghetti Portofino
-            </h1>
+            <h1 style={{ fontSize: 50, fontWeight: "bold" }}>{name}</h1>
             <Image
-              src={spaghetti}
+              src={require("./images/" + image + ".jpg")}
               rounded
               style={{ width: "480px", height: "400px" }}
             />
             <p class="text-left" style={{ fontSize: "25px" }}>
-              Lemon butter sauce, roasted gem tomatoes, corn, fennel chili
-              crumb, garlic crostini
+              {desc}
             </p>
             <p class="text-left" style={{ fontSize: "22px" }}>
               Customer rating:
@@ -51,54 +124,88 @@ function DetailedItem() {
               <span class="fa fa-star"></span>
             </p>
             <p class="text-left" style={{ fontSize: "22px" }}>
-              Price: $28
+              Price: ${price}
             </p>
             <p class="text-left" style={{ fontSize: "22px" }}>
-              Tags: <u>vegetarian</u> <u>pasta</u>
+              Tags: <u>{tags}</u>
             </p>
           </Col>
           <Col md={6}>
-            <h1 style={{ fontSize: 50, fontWeight: "bold" }}>
-              Customize Order
-            </h1>
-            <p class="text-left">
-              {" "}
-              <br></br>
-              <h3 style={{ fontSize: 40 }}>Add protein</h3>
-            </p>
-            <Form style={{ fontSize: "26px" }}>
-              {["checkbox"].map((type) => (
-                <div key={`default-${type}`} className="mb-3">
-                  <Form.Check
-                    type={type}
-                    id={`shrimp-${type}`}
-                    label={`Shrimp $4`}
-                  />
-                  <Form.Check
-                    type={type}
-                    id={`chicken-${type}`}
-                    label={`Chicken $4`}
-                  />
-                  <Form.Check
-                    type={type}
-                    id={`sausage-${type}`}
-                    label={`Sausage $4`}
-                  />
-                </div>
-              ))}
-            </Form>
-            <Form>
-              <Form.Group
-                className="mb-3"
-                controlId="exampleForm.ControlTextarea1"
+            <>
+              {proteinAvailable && (
+                <>
+                  <h1 style={{ fontSize: 50, fontWeight: "bold" }}>
+                    Add protein
+                  </h1>
+                  <Form style={{ fontSize: "26px" }}>
+                    {customize.map((proteinOption, index) => (
+                      <Form.Check
+                        key={index}
+                        type="checkbox"
+                        id={`protein-${index}`}
+                        label={proteinOption}
+                        checked={selectedProtein === `protein-${index}`}
+                        onChange={handleProteinChange}
+                      />
+                    ))}
+                  </Form>
+                </>
+              )}
+              <Form>
+                <Form.Group
+                  className="mb-3"
+                  controlId="exampleForm.ControlTextarea1"
+                >
+                  <Form.Label>
+                    <br></br>
+                    <h3 style={{ fontSize: 40 }}>Customization notes</h3>
+                  </Form.Label>
+                  <Form.Control as="textarea" rows={3} onChange={handleNote} />
+                </Form.Group>
+              </Form>
+              <h1
+                style={{
+                  marginTop: 40,
+                  fontSize: 40,
+                  display: "flex",
+                  alignItems: "center",
+                }}
               >
-                <Form.Label>
-                  <br></br>
-                  <h3 style={{ fontSize: 40 }}>Customization notes</h3>
-                </Form.Label>
-                <Form.Control as="textarea" rows={3} />
-              </Form.Group>
-            </Form>
+                Quantity
+              </h1>
+              <div
+                style={{
+                  marginTop: 40,
+                  fontSize: 40,
+                  display: "flex",
+                  alignItems: "center",
+                }}
+              >
+                <button
+                  style={{
+                    fontSize: 20,
+                    border: "3px solid black",
+                    height: 40,
+                    width: 40,
+                  }}
+                  onClick={handleDecrement}
+                >
+                  -
+                </button>
+                <h1 style={{ margin: "0 20px" }}>{count}</h1>
+                <button
+                  style={{
+                    fontSize: 20,
+                    border: "3px solid black",
+                    height: 40,
+                    width: 40,
+                  }}
+                  onClick={handleIncrement}
+                >
+                  +
+                </button>
+              </div>
+            </>
           </Col>
         </Row>
       </Container>
@@ -116,6 +223,7 @@ function DetailedItem() {
             height: "80px",
             fontSize: "30px",
           }}
+          onClick={() => returnToPage()}
         >
           <span
             style={{

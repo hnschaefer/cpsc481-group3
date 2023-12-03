@@ -1,20 +1,26 @@
 [
   {
-    "id": 1,
+    "id": 32,
     "item": "Lemongrass Noodle Salad",
-    "price": "$23.75",
-    "image": "lemongrasssalad"
+    "price": 23.75,
+    "image": "lemongrasssalad",
+    "desc": "Grilled lemongrass chicken, rice noodles, fresh greens, peanuts, avocado, carrot, cabbage, serrano peppers, thai basil, cilantro, sweet citrus vinaigrette",
+    "tags": "Gluten-Free"
   },
   {
-    "id": 2,
+    "id": 33,
     "item": "Avocado Kale Salad",
-    "price": "$18.25",
-    "image": "avocadokalesalad"
+    "price": 18.25,
+    "image": "avocadokalesalad",
+    "desc": "Crispy chickpeas, grilled avocado, pickled red cabbage, fennel chili crumb, grana padano, lemon garlic dressing",
+    "tags": "Vegan-Friendly, Vegetarian"
   },
   {
-    "id": 3,
+    "id": 34,
     "item": "Raincost Greens",
-    "price": "$24.75",
-    "image": "raincoastgreens"
+    "price": 24.75,
+    "image": "raincoastgreens",
+    "desc": "Fresh greens, grilled chicken breast, avocado, tomatoes, feta, spicy pecans, cucumber, egg, lemon-thyme vinaigrette",
+    "tags": "Gluten-Free"
   }
 ]

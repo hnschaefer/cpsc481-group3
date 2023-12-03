@@ -1,27 +1,34 @@
 [
-    {
-      "id": 1,
-      "item": "The Feenie Burger",
-      "price": "$24.75",
-      "image": "feenieburger"
-    },
-    {
-      "id": 2,
-      "item": "Garden Burger",
-      "price": "$21.75",
-      "image": "gardenburger"
-    },
-    {
-      "id": 3,
-      "item": "Cheddar Bacon Burger",
-      "price": "$23.50",
-      "image": "cheddarbaconburger"
-    },
-    {
-      "id": 4,
-      "item": "Impossible Burger",
-      "price": "$23.25",
-      "image": "impossibleburger"
-    }
-  ]
-  
+  {
+    "id": 19,
+    "item": "The Feenie Burger",
+    "price": 24.75,
+    "image": "feenieburger",
+    "desc": "Smashed certified angus beef, sautéed mushrooms, aged cheddar, smoked bacon, red relish, mayonnaise, ketchup, mustard, sea salted fries",
+    "tags": ""
+  },
+  {
+    "id": 20,
+    "item": "Garden Burger",
+    "price": 21.75,
+    "image": "gardenburger",
+    "desc": "Aged cheddar, red relish, mayonnaise, ketchup, mustard, brioche bun, sea salted fries",
+    "tags": "Vegetarian"
+  },
+  {
+    "id": 21,
+    "item": "Cheddar Bacon Burger",
+    "price": 23.75,
+    "image": "cheddarbaconburger",
+    "desc": "Smashed certified angus beef, aged cheddar, smoked bacon, red relish, mayonnaise, ketchup, mustard, sea salted fries",
+    "tags": ""
+  },
+  {
+    "id": 22,
+    "item": "Impossible Burger",
+    "price": 23.25,
+    "image": "impossibleburger",
+    "desc": "Impossible plant-based patty, red relish, vegan mayo, ketchup, mustard, vegan bun, sea salted fries",
+    "tags": "Vegan-Friendly"
+  }
+]

@@ -1,20 +1,26 @@
 [
   {
-    "id": 1,
+    "id": 71,
     "item": "Salmon Aburi Roll",
-    "price": "$19.25",
-    "image": "salmonaburiroll"
+    "price": 19.25,
+    "image": "salmonaburiroll",
+    "desc": "Flame torched ocean wise™ steelhead, mango, avocado, crispy tempura, serrano pepper, soy glaze",
+    "tags": ""
   },
   {
-    "id": 2,
+    "id": 72,
     "item": "Zen Roll",
-    "price": "$16.50",
-    "image": "zenroll"
+    "price": 16.25,
+    "image": "zenroll",
+    "desc": "100% plant-based. yuzu tamari, avocado, mango, sesame soy paper, vegan mayo, soy glaze, crispy taro",
+    "tags": ""
   },
   {
-    "id": 3,
+    "id": 73,
     "item": "Prawn Crunch Roll",
-    "price": "$18.50",
-    "image": "prawncrunchroll"
+    "price": 18.75,
+    "image": "prawncrunchroll",
+    "desc": "Crispy prawn, mango, avocado, sesame soy paper, sriracha mayo, so",
+    "tags": "Gluten-Free, Vegetarian, Vegan-Friendly"
   }
 ]

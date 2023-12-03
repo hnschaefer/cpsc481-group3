@@ -2,85 +2,113 @@
   {
     "id": 1,
     "item": "Cadillac Margarita (2oz)",
-    "price": "$20.00",
-    "image": "cadillac"
+    "price": 20.0,
+    "image": "cadillac",
+    "desc": "Don julio reposado, grand marnier, fresh lime",
+    "tags": ""
   },
   {
     "id": 2,
     "item": "Mezcal Margarita (2oz)",
-    "price": "$13.25",
-    "image": "mezcal"
+    "price": 13.25,
+    "image": "mezcal",
+    "desc": "400 conejos mezcal, cuervo tradicional plata, triple sec, charred pineapple, fresh lime",
+    "tags": ""
   },
   {
     "id": 3,
     "item": "Signature Sangria (6oz)",
-    "price": "$12.50",
-    "image": "sangriasignature"
+    "price": 12.25,
+    "image": "sangriasignature",
+    "desc": "Zinfandel, apricot brandy, fresh strawberries, raspberries, sprite and bellini",
+    "tags": ""
   },
   {
     "id": 4,
     "item": "Midnight Hour (2oz)",
-    "price": "$13.00",
-    "image": "midnighthour"
+    "price": 13.0,
+    "image": "midnighthour",
+    "desc": "Espresso martini with smirnoff vodka, kahlua, fresh espresso, chocolate bitters",
+    "tags": ""
   },
   {
     "id": 5,
     "item": "Penicillin (2oz)",
-    "price": "$16.00",
-    "image": "penicillin"
+    "price": 16.0,
+    "image": "penicillin",
+    "desc": "Johnnie walker black, honey, ginger, lemon, lagavulin peated whisky",
+    "tags": ""
   },
   {
     "id": 6,
     "item": "Whiskey Sour (2oz)",
-    "price": "$13.50",
-    "image": "whiskeysour"
+    "price": 13.75,
+    "image": "whiskeysour",
+    "desc": "Jack Daniel’s tennessee whiskey, fresh lemon, lime, egg whites and angostura bitters",
+    "tags": ""
   },
   {
     "id": 7,
     "item": "Vodka (1oz)",
-    "price": "$10.75",
-    "image": "vodka"
+    "price": 10.75,
+    "image": "vodka",
+    "desc": "Smirnoff vodka or gordon’s dry gin, white peach, elderflower, soda, cucumber",
+    "tags": ""
   },
   {
     "id": 8,
     "item": "Kyoto Fizz (1.5oz)",
-    "price": "$12.75",
-    "image": "kyotofizz"
+    "price": 12.75,
+    "image": "kyotofizz",
+    "desc": "Smirnoff vodka, sake, yuzu, white peach, chamomile, lime, soda and thyme",
+    "tags": ""
   },
   {
     "id": 9,
     "item": "Tequila Seltzer (1oz)",
-    "price": "$10.75",
-    "image": "tequilaseltzer"
+    "price": 10.75,
+    "image": "tequilaseltzer",
+    "desc": "Cazadores reposado, guava, soda, lime",
+    "tags": ""
   },
   {
     "id": 10,
     "item": "Aperol Spritz (5oz)",
-    "price": "$13.75",
-    "image": "aperolspritz"
+    "price": 13.75,
+    "image": "aperolspritz",
+    "desc": "Prosecco, aperol, soda and orange",
+    "tags": ""
   },
   {
     "id": 11,
     "item": "The Bellini (2oz)",
-    "price": "$11.00",
-    "image": "bellini"
+    "price": 11.0,
+    "image": "bellini",
+    "desc": "Bacardi superior, peach schnapps, sparkling wine, peach and sangria",
+    "tags": ""
   },
   {
     "id": 12,
     "item": "The Pearl (2oz)",
-    "price": "$12.50",
-    "image": "pearl"
+    "price": 12.25,
+    "image": "pearl",
+    "desc": "Kiwi, cucumber, mint, soda, popping passion fruit pearls",
+    "tags": ""
   },
   {
     "id": 13,
     "item": "Hula Hula (2oz)",
-    "price": "$13.25",
-    "image": "hulahula"
+    "price": 13.25,
+    "image": "hulahula",
+    "desc": "Aviation american gin, campari, pineapple, passion fruit, tropical bitters",
+    "tags": ""
   },
   {
     "id": 14,
     "item": "Coca Cola",
-    "price": "$7.00",
-    "image": "cocacola"
+    "price": 7.0,
+    "image": "cocacola",
+    "desc": "Refreshing soda",
+    "tags": ""
   }
 ]

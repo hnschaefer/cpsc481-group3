@@ -1,75 +1,99 @@
 [
   {
-    "id": 1,
+    "id": 53,
     "item": "Tuna Stack",
-    "price": "$21.25",
-    "image": "tunastack"
+    "price": 21.25,
+    "image": "tunastack",
+    "desc": "Ocean wise ahi, citrus tamari vinaigrette, nori, sesame, avocado, microgreens, wonton crisps",
+    "tags": ""
   },
   {
-    "id": 2,
+    "id": 54,
     "item": "Wagyu Beef Carpaccio",
-    "price": "$21.75",
-    "image": "beefcarpaccio"
+    "price": 21.75,
+    "image": "beefcarpaccio",
+    "desc": "Peppercorn-crusted wagyu beef, bearnaise aioli, capers, arugula, pickled onions, freshly grated horseradish, garlic crostini",
+    "tags": ""
   },
   {
-    "id": 3,
+    "id": 55,
     "item": "Szechuan Lettuce Wraps",
-    "price": "$23.25",
-    "image": "szechuanwraps"
+    "price": 23.25,
+    "image": "szechuanwraps",
+    "desc": "Sweet and spicy szechuan glaze, peanuts, wontons, korean chili sauce, spicy yogurt",
+    "tags": ""
   },
   {
-    "id": 4,
+    "id": 56,
     "item": "Avocado Dip",
-    "price": "$14.00",
-    "image": "avocadodip"
+    "price": 14.00,
+    "image": "avocadodip",
+    "desc": "Pico de gallo, feta, chili oil, cilantro, fresh lime",
+    "tags": "Gluten-Free, Vegetarian, Vegan-Friendly"
   },
   {
-    "id": 5,
+    "id": 57,
     "item": "Mini Crispy Chicken Sandwhiches",
-    "price": "$17.50",
-    "image": "minichicken"
+    "price": 17.25,
+    "image": "minichicken",
+    "desc": "Spicy panko-crusted chicken, swiss cheese, sambal mayo, lettuce, tomato, pickle, onion",
+    "tags": ""
   },
   {
-    "id": 6,
+    "id": 58,
     "item": "Truffle Fries",
-    "price": "$12.50",
-    "image": "trufflefries"
+    "price": 12.75,
+    "image": "trufflefries",
+    "desc": "Truffle, herbs, grana padano, garlic aioli",
+    "tags": "Gluten-Free"
   },
   {
-    "id": 7,
+    "id": 59,
     "item": "Crab Cake",
-    "price": "$19.50",
-    "image": "sharecrabcake"
+    "price": 19.75,
+    "image": "sharecrabcake",
+    "desc": "Panko-crusted canadian rock crab, prawn, cucumber, arugula, green goddess dressing",
+    "tags": ""
   },
   {
-    "id": 8,
+    "id": 60,
     "item": "Mini Burgers",
-    "price": "$17.50",
-    "image": "miniburg"
+    "price": 17.25,
+    "image": "miniburg",
+    "desc": "Smashed certified angus beef, cheddar, bacon, lettuce, tomato, red pepper relish, dijon mayonnaise",
+    "tags": ""
   },
   {
-    "id": 9,
+    "id": 61,
     "item": "Crispy Yam Fries",
-    "price": "$12.00",
-    "image": "yamfries"
+    "price": 12.00,
+    "image": "yamfries",
+    "desc": "Garlic aioli",
+    "tags": "Gluten-Free, Vegetarian, Vegan-Friendly"
   },
   {
-    "id": 10,
+    "id": 62,
     "item": "Hot Chicken & Pickles",
-    "price": "$18.00",
-    "image": "chickenpickle"
+    "price": 18.00,
+    "image": "chickenpickle",
+    "desc": "Crispy fried chicken, nashville spice, honey, creamy parmesan dip",
+    "tags": "Gluten-Free"
   },
   {
-    "id": 11,
+    "id": 63,
     "item": "Chicken Wings",
-    "price": "$19.50",
-    "image": "chickenwings"
+    "price": 19.25,
+    "image": "chickenwings",
+    "desc": "Salt & pepper or louisiana hot, celery, creamy parmesan dip",
+    "tags": "Gluten-Free"
   },
   {
-    "id": 12,
+    "id": 64,
     "item": "Ravioli & Prawn Trio",
-    "price": "$18.50",
-    "image": "ravioliprawn"
+    "price": 18.25,
+    "image": "ravioliprawn",
+    "desc": "Chef Rob Feenie’s signature butternut squash and mascarpone ravioli, truffle butter, sautéed prawns, pine nuts, crispy sage",
+    "tags": ""
   }
   
 ]

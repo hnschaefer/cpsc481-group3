@@ -1,26 +1,34 @@
 [
   {
-    "id": 1,
+    "id": 15,
     "item": "The Med Bowl",
-    "price": "$24.75",
-    "image": "medbowl"
+    "price": 24.75,
+    "image": "medbowl",
+    "desc": "Turmeric rice, beetroot hummus, kale, cucumber, red onion, tomatoes, macedonian feta, kalamata olives, yogurt, pickled red cabbage",
+    "tags": "Gluten-Free"
   },
   {
-    "id": 2,
+    "id": 16,
     "item": "Crispy Tofu Bowl",
-    "price": "$24.00",
-    "image": "crispytofubowl"
+    "price": 24.00,
+    "image": "crispytofubowl",
+    "desc": "100% plant-based. soy chili tofu, jasmine rice, mango, cucumber, avocado, edamame, ginger, radish",
+    "tags": "Gluten-Free, Vegan-Friendly"
   },
   {
-    "id": 3,
+    "id": 17,
     "item": "Tuna Poke Bowl",
-    "price": "$25.75",
-    "image": "tunapokebowl"
+    "price": 25.75,
+    "image": "tunapokebowl",
+    "desc": "Sesame ginger ocean wise™ ahi, jasmine rice, mango, cucumber, avocado, edamame, ginger, radish, crispy tempura",
+    "tags": ""
   },
   {
-    "id": 4,
+    "id": 18,
     "item": "Teriyaki Chicken Rice Bowl",
-    "price": "$23.00",
-    "image": "chickenricebowl"
+    "price": 23.00,
+    "image": "chickenricebowl",
+    "desc": "Peppers, broccoli, red cabbage, bean sprouts, spicy yogurt",
+    "tags": ""
   }
 ]

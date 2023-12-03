@@ -11,6 +11,8 @@ import burgersdata from "../Data/burgers.json";
 import steaksdata from "../Data/steaks.json";
 import dessertsdata from "../Data/desserts.json";
 import beveragesdata from "../Data/beverages.json";
+import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 
@@ -39,6 +41,15 @@ const Features = (props) => {
     renderData = beveragesdata;
   }
 
+  const navigate = useNavigate();
+
+  function goToDetailedItem(id, name, price, image, desc, tags) {
+    navigate("/DetailedItem", {
+      state: { id, name, price, image, desc, tags },
+    });
+  }
+  const state = useSelector((state) => state);
+
   return (
     <div className="overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide">
       <Row xs={2} md={4} className="g-4" style={{ display: "flex" }}>
@@ -47,7 +58,19 @@ const Features = (props) => {
             key={menu.id}
             style={{ display: "flex", justifyContent: "center" }}
           >
-            <Card style={{ width: "300px" }}>
+            <Card
+              style={{ width: "300px" }}
+              onClick={() =>
+                goToDetailedItem(
+                  menu.id,
+                  menu.item,
+                  menu.price,
+                  menu.image,
+                  menu.desc,
+                  menu.tags
+                )
+              }
+            >
               <Card.Img
                 variant="top"
                 src={require("../images/" + menu.image + ".jpg")}
@@ -55,19 +78,26 @@ const Features = (props) => {
               />
               <Card.Body style={{ background: "#414042", color: "#ffffff" }}>
                 <Card.Title style={{ fontSize: 20 }}>{menu.item}</Card.Title>
-                <Card.Text>
-                  {menu.price}{" "}
-                  <AddCircleOutlineIcon
-                    style={{
-                      width: "30px",
-                      height: "30px",
-                      display: "inline-block",
-                      marginLeft: 190,
-                      marginTop: 10,
-                      color: "#c69a50",
-                    }}
-                  />
+                <Card.Text
+                  style={{
+                    whiteSpace: "pre-wrap",
+                    maxHeight: "100px",
+                    overflow: "hidden",
+                  }}
+                >
+                  {`$` + menu.price} <br></br>
+                  {menu.desc}
                 </Card.Text>
+                <AddCircleOutlineIcon
+                  style={{
+                    width: "30px",
+                    height: "30px",
+                    display: "inline-block",
+                    marginLeft: "90%",
+                    marginTop: 10,
+                    color: "#c69a50",
+                  }}
+                />
               </Card.Body>
             </Card>
           </Col>

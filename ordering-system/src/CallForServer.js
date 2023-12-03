@@ -23,19 +23,21 @@ function CallForServer() {
     const selectedItems = items.filter((item) => item.completed);
 
     if (selectedItems.length === 0) {
-      // No option selected, show a message
       setShowMessage("Please select one of the options!");
       setTimeout(() => {
         setShowMessage(false);
       }, 3000);
     } else {
-      // Options selected, show a different message
       setShowMessage("The server is on their way!");
       setTimeout(() => {
         setShowMessage(false);
         setShowComponent(false);
       }, 3000);
     }
+  };
+
+  const handleCloseClick = () => {
+    setShowComponent(false);
   };
 
   return (
@@ -67,6 +69,13 @@ function CallForServer() {
                   ))}
                   <button className="ok-button" onClick={handleRequestClick}>
                     Ok
+                  </button>
+                  <button
+                    style={{ marginTop: 5 }}
+                    className="close-button"
+                    onClick={handleCloseClick}
+                  >
+                    Close
                   </button>
                 </ul>
               ) : (

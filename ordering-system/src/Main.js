@@ -8,6 +8,7 @@ import OrderAlert from "./OrderAlert";
 import AddToCart from "./AddToCart";
 import ThankYou from "./ThankYou";
 import Pay from "./Pay";
+import Testpage from "./Testpage";
 
 function Main() {
   return (
@@ -20,6 +21,7 @@ function Main() {
         <Route path="/Popup" index element={<AddToCart />} />
         <Route path="/ThankYou" index element={<ThankYou />} />
         <Route path="/Pay" index element={<Pay />} />
+        <Route path="/test" index element={<Testpage />} />
       </Routes>
     </BrowserRouter>
   );

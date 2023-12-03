@@ -1,38 +1,50 @@
 [
   {
-    "id": 1,
+    "id": 65,
     "item": "Millionaire's Cut",
-    "price": "$54.75",
-    "image": "millionairescut"
+    "price": 54.75,
+    "image": "millionairescut",
+    "desc": "White wine sautéed creole prawns, buttered mashed potatoes, seasonal vegetables",
+    "tags": ""
   },
   {
-    "id": 2,
+    "id": 66,
     "item": "Steak & Mushroom",
-    "price": "$38.75",
-    "image": "steakmushroom"
+    "price": 38.75,
+    "image": "steakmushroom",
+    "desc": "8oz CAB sirloin, grilled oyster mushrooms, button mushrooms, red wine jus, buttered mashed potatoes, seasonal vegetables",
+    "tags": ""
   },
   {
-    "id": 3,
+    "id": 67,
     "item": "Peppercorn Steak",
-    "price": "$38.75",
-    "image": "peppercornsteak"
+    "price": 38.75,
+    "image": "peppercornsteak",
+    "desc": "8oz CAB sirloin, Chef Rob Feenie’s pernod peppercorn demi-glace, buttered mashed potatoes, seasonal vegetables",
+    "tags": "Gluten-Free"
   },
   {
-    "id": 4,
+    "id": 68,
     "item": "Steak Frites",
-    "price": "$33.75",
-    "image": "steakfrites"
+    "price": 33.75,
+    "image": "steakfrites",
+    "desc": "8oz CAB sirloin, kale salad, horseradish cream, sea salted fries",
+    "tags": ""
   },
   {
-    "id": 5,
+    "id": 69,
     "item": "Creole Steak & Prawns",
-    "price": "$44.25",
-    "image": "creolesteak"
+    "price": 44.25,
+    "image": "creolesteak",
+    "desc": "8oz CAB sirloin, cajun spices, spicy creole butter, white wine sautéed creole prawns, buttered mashed potatoes, seasonal vegetables",
+    "tags": ""
   },
   {
-    "id": 6,
+    "id": 70,
     "item": "Chargrilled Steak",
-    "price": "$34.75",
-    "image": "chargrilledsteak"
+    "price": 34.75,
+    "image": "chargrilledsteak",
+    "desc": "8oz CAB sirloin, buttered mashed potatoes, seasonal vegetable",
+    "tags": "Gluten-Free"
   }
 ]

@@ -1,32 +1,42 @@
 [
   {
-    "id": 1,
+    "id": 23,
     "item": "Key Lime Pie",
-    "price": "$12.00",
-    "image": "keylimepie"
+    "price": 12.00,
+    "image": "keylimepie",
+    "desc": "Freshly squeezed key limes, graham cracker crust, hand-whipped cream",
+    "tags": ""
   },
   {
-    "id": 2,
+    "id": 24,
     "item": "Chocolate Lava Cake",
-    "price": "$11.25",
-    "image": "lavacake"
+    "price": 11.25,
+    "image": "lavacake",
+    "desc": "Molten dark chocolate cake, tahitian vanilla ice cream",
+    "tags": ""
   },
   {
-    "id": 3,
+    "id": 25,
     "item": "New York Cheesecake",
-    "price": "$12.00",
-    "image": "newyorkcheesecake"
+    "price": 12.00,
+    "image": "newyorkcheesecake",
+    "desc": "Graham cracker crust, raspberry compote, hand-whipped cream",
+    "tags": ""
   },
   {
-    "id": 4,
+    "id": 26,
     "item": "Six Layer Chocolate Slice",
-    "price": "$18.00",
-    "image": "sixchocolate"
+    "price": 18.00,
+    "image": "sixchocolate",
+    "desc": "Tahitian vanilla ice cream, cherry. Made to share",
+    "tags": ""
   },
   {
-    "id": 5,
+    "id": 27,
     "item": "Peanut Butter Crunch Bar",
-    "price": "$12.00",
-    "image": "pbcrunch"
+    "price": 12.00,
+    "image": "pbcrunch",
+    "desc": "Tahitian vanilla ice cream, caramel sauce, crunchy chocolate pearls",
+    "tags": ""
   }
 ]
