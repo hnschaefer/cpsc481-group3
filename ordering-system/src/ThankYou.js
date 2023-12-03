@@ -1,6 +1,6 @@
 import "./ThankYou.css";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import Navbar from "./Navbar";
+import ReturnToMenuNavbar from "./ReturnToMenuNavbar";
 import smile from ".//icons/icons/emoji-smile.svg";
 import Image from "react-bootstrap/Image";
 
@@ -14,7 +14,7 @@ function ThankYou() {
           paddingBottom: 20,
         }}
       >
-        <Navbar />
+        <ReturnToMenuNavbar />
       </div>
       <br></br>
       <hr></hr>
@@ -23,7 +23,10 @@ function ThankYou() {
           <span style={{ fontSize: "120px" }}>Thank You!</span>
         </p>
         <p>
-          <span style={{ fontSize: "60px" }}>Your order is being prepared</span>
+          <span style={{ fontSize: "35px" }}>
+            Your order is being prepared. If you would like to return to the
+            menu, press the return to menu button in the top left.{" "}
+          </span>
         </p>
         <br></br>
         <Image

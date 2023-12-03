@@ -14,13 +14,27 @@ const cartReducer = (state = initialState, action) => {
       if (existingItemIndex !== -1) {
         state.cartItems[existingItemIndex].quantity += newItem.quantity;
       } else {
-        state.cartItems.push({
-          name: newItem.name,
-          quantity: newItem.quantity,
-          price: newItem.itemPrice,
-          note: newItem.note,
-          image: newItem.image,
-        });
+        if (newItem.extraProtein !== "") {
+          state.cartItems.push({
+            name: newItem.name,
+            quantity: newItem.quantity,
+            price: newItem.itemPrice + 4,
+            note: newItem.note,
+            image: newItem.image,
+            extraProtein: newItem.extraProtein,
+            status: newItem.status,
+          });
+        } else {
+          state.cartItems.push({
+            name: newItem.name,
+            quantity: newItem.quantity,
+            price: newItem.itemPrice,
+            note: newItem.note,
+            image: newItem.image,
+            extraProtein: newItem.extraProtein,
+            status: newItem.status,
+          });
+        }
       }
 
       return {
@@ -39,7 +53,7 @@ const cartReducer = (state = initialState, action) => {
             ? state.cartItems[itemIndexToUpdate].quantity - 1
             : 1;
       }
-      console.log(state.cartItems[itemIndexToUpdate].quantity);
+      console.log({ ...state });
       return {
         ...state,
       };
@@ -56,7 +70,7 @@ const cartReducer = (state = initialState, action) => {
             ? state.cartItems[itemIndexToUpdateHigher].quantity + 1
             : 9;
       }
-      console.log(state.cartItems[itemIndexToUpdateHigher].quantity);
+      console.log({ ...state });
       return {
         ...state,
       };
@@ -68,6 +82,35 @@ const cartReducer = (state = initialState, action) => {
       state.cartItems[noteIndex].note = newNote.note;
       return {
         ...state,
+      };
+    case "remove":
+      const removalItem = action.payload;
+      const removalIndex = state.cartItems.findIndex(
+        (item) => item.name === removalItem
+      );
+      if (removalIndex !== -1) {
+        const updatedCartItems = [
+          ...state.cartItems.slice(0, removalIndex),
+          ...state.cartItems.slice(removalIndex + 1),
+        ];
+        console.log(updatedCartItems);
+        return {
+          ...state,
+          cartItems: updatedCartItems,
+        };
+      }
+      return {
+        ...state,
+      };
+
+    case "statupdate":
+      const statup = state.cartItems.map((item) => ({
+        ...item,
+        status: "Ordered",
+      }));
+      return {
+        ...state,
+        cartItems: statup,
       };
 
     default:

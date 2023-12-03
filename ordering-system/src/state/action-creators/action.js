@@ -12,7 +12,6 @@ export const lowerCart = (item) => {
   };
 };
 
-
 export const higherCart = (item) => {
   return {
     type: "higher",
@@ -23,6 +22,27 @@ export const higherCart = (item) => {
 export const updateNote = (item) => {
   return {
     type: "overwritenote",
+    payload: item,
+  };
+};
+
+export const removeCart = (item) => {
+  return {
+    type: "remove",
+    payload: item,
+  };
+};
+
+export const addProtein = (item) => {
+  return {
+    type: "proteinAdd",
+    payload: item,
+  };
+};
+
+export const upstat = (item) => {
+  return {
+    type: "statupdate",
     payload: item,
   };
 };

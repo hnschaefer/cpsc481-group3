@@ -12,24 +12,28 @@ import ReturnToMenuNavbar from "./ReturnToMenuNavbar";
 import { useSelector, useDispatch } from "react-redux";
 import { actionCreators } from "./state/actionimp";
 import { bindActionCreators } from "redux";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Cart() {
-  const state = useSelector((state) => state);
-  const [contents, setContents] = useState(state.cart.cartItems);
+  const cartState = useSelector((state) => state.cart.cartItems);
+  const navigate = useNavigate();
+  // const [contents, setContents] = useState(state.cart.cartItems);
   const [selectedItem, setSelectedItem] = useState(null);
   const [showModal, setShowModal] = useState(false);
+  const [temp, setTemp] = useState("");
   const dispatch = useDispatch();
-  const { lowerCart, higherCart, updateNote } = bindActionCreators(
-    actionCreators,
-    dispatch
-  );
+  const { lowerCart, higherCart, updateNote, removeCart, upstat } =
+    bindActionCreators(actionCreators, dispatch);
 
   const lowerQuant = (item) => {
     lowerCart(item);
   };
 
   const higherQuant = (item) => {
-    higherCart(item);
+    const name = item;
+    higherCart(name);
+    console.log(cartState);
   };
 
   const handleEditClick = (item) => {
@@ -37,18 +41,35 @@ function Cart() {
     setShowModal(true);
   };
 
+  const tempRefresh = (item) => {
+    setTemp(item);
+  };
+
   const handleModalClose = () => {
     setShowModal(false);
   };
 
+  const removalOfItem = (item) => {
+    const name = item;
+    removeCart(name);
+    // setContents(state.cart.cartItems);
+  };
+
   const handleSaveNote = () => {
-    // Perform any logic to save the updated note to the Redux store
-    // For now, just close the modal
-    console.log(selectedItem);
     const note = { name: selectedItem.name, note: selectedItem.note };
     updateNote(note);
     setShowModal(false);
   };
+
+  const processOrder = (cartState) => {
+    upstat(cartState);
+    navigate("/ThankYou");
+  };
+
+  useEffect(() => {
+    console.log(cartState);
+    setTemp("");
+  }, [cartState, temp]);
 
   return (
     <div className="Cart">
@@ -77,7 +98,7 @@ function Cart() {
             <h1 style={{ fontSize: 50, fontWeight: "bold" }}>Edit/Remove</h1>
           </td>
         </tr>
-        {contents.map((item) => (
+        {cartState.map((item) => (
           <tr key={item.name}>
             <td style={{ paddingTop: 50 }}>
               <Image
@@ -102,7 +123,10 @@ function Cart() {
                     justifyContent: "center",
                     border: "2px solid black",
                   }}
-                  onClick={() => lowerQuant(item.name)}
+                  onClick={() => {
+                    tempRefresh(item);
+                    lowerQuant(item.name);
+                  }}
                 >
                   <span style={{ fontSize: "40px" }}>-</span>
                 </Button>
@@ -124,7 +148,10 @@ function Cart() {
                     height: "80px",
                     border: "2px solid black",
                   }}
-                  onClick={() => higherQuant(item.name)}
+                  onClick={() => {
+                    tempRefresh(item);
+                    higherQuant(item.name);
+                  }}
                 >
                   <span style={{ fontSize: "40px" }}>+</span>
                 </Button>
@@ -158,6 +185,7 @@ function Cart() {
                 variant="dark"
                 size="lg"
                 style={{ backgroundColor: "#414042" }}
+                onClick={() => removalOfItem(item.name)}
               >
                 <Image
                   src={remove}
@@ -222,6 +250,7 @@ function Cart() {
             height: "80px",
             fontSize: "30px",
           }}
+          onClick={() => processOrder()}
         >
           <span
             style={{

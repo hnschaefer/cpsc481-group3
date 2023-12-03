@@ -35,6 +35,7 @@ function DetailedItem() {
     itemPrice: price,
     note: note,
     image: image,
+    extraProtein: "",
   };
 
   const state = useSelector((state) => state);
@@ -78,6 +79,7 @@ function DetailedItem() {
   };
 
   const returnToPage = () => {
+    cartdetails.extraProtein = selectedProtein;
     addToCart(cartdetails);
     navigate("/Menu");
   };
