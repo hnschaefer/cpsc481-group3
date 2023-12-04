@@ -25,7 +25,7 @@ const ReturnToMenuNavbar = () => {
     } else if (value === "pay") {
       navigate("/Pay");
     } else if (value === "menu") {
-      navigate("/Menu");
+      navigate("/");
     } else if (value === "call") {
       setServerCall(true);
     }

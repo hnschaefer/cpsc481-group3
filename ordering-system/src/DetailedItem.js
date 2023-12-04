@@ -74,7 +74,7 @@ function DetailedItem() {
   const returnToPage = () => {
     cartdetails.extraProtein = selectedProtein;
     addToCart(cartdetails);
-    navigate("/Menu");
+    navigate("/");
   };
 
   const handleNote = (event) => {

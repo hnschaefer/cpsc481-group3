@@ -15,7 +15,7 @@ function Main() {
     <BrowserRouter>
       <Routes>
         <Route path="/DetailedItem" index element={<DetailedItem />} />
-        <Route path="/Menu" index element={<Menu />} />
+        <Route path="/" index element={<Menu />} />
         <Route path="/Cart" index element={<Cart />} />
         <Route path="/Alert" index element={<OrderAlert />} />
         <Route path="/Popup" index element={<AddToCart />} />
