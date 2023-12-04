@@ -111,25 +111,25 @@ function DetailedItem() {
               rounded
               style={{ width: "480px", height: "400px" }}
             />
-            <p class="text-left" style={{ fontSize: "25px" }}>
+            <p className="text-left" style={{ fontSize: "25px" }}>
               {desc}
             </p>
-            <p class="text-left" style={{ fontSize: "22px" }}>
+            <p className="text-left" style={{ fontSize: "22px" }}>
               Customer rating:
               <link
                 rel="stylesheet"
                 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
               ></link>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star"></span>
+              <span className="fa fa-star checked"></span>
+              <span className="fa fa-star checked"></span>
+              <span className="fa fa-star checked"></span>
+              <span className="fa fa-star checked"></span>
+              <span className="fa fa-star"></span>
             </p>
-            <p class="text-left" style={{ fontSize: "22px" }}>
+            <p className="text-left" style={{ fontSize: "22px" }}>
               Price: ${price}
             </p>
-            <p class="text-left" style={{ fontSize: "22px" }}>
+            <p className="text-left" style={{ fontSize: "22px" }}>
               Tags: <u>{tags}</u>
             </p>
           </Col>
@@ -212,7 +212,7 @@ function DetailedItem() {
           </Col>
         </Row>
       </Container>
-      <div class="d-flex justify-content-center">
+      <div className="d-flex justify-content-center">
         <Button
           variant="dark"
           size="lg"
@@ -235,7 +235,7 @@ function DetailedItem() {
               verticalAlign: "middle",
             }}
           >
-            Add To Order
+            Add To Cart
           </span>
           <Image
             src={cartplus}

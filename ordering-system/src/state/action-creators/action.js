@@ -46,3 +46,10 @@ export const upstat = (item) => {
     payload: item,
   };
 };
+
+export const cartPriceUpdate = (item) => {
+  return {
+    type: "cartPriceUpdate",
+    payload: item,
+  };
+};

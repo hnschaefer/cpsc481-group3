@@ -1,6 +1,7 @@
 const initialState = {
   cartItems: [],
   totalCost: 0,
+  cartTotalCost: 0,
 };
 
 const cartReducer = (state = initialState, action) => {
@@ -78,6 +79,18 @@ const cartReducer = (state = initialState, action) => {
       );
 
       if (itemIndexToUpdate !== -1) {
+        const newPriceBeingSubedToCartTotal = parseFloat(
+          state.cartItems[itemIndexToUpdate].price
+        );
+        if (state.cartItems[itemIndexToUpdate].quantity !== 1) {
+          const existingCartTotalCostSub = parseFloat(state.cartTotalCost);
+          if (existingCartTotalCostSub - newPriceBeingSubedToCartTotal < 0) {
+            state.cartTotalCost = 0;
+          } else {
+            state.cartTotalCost =
+              existingCartTotalCostSub - newPriceBeingSubedToCartTotal;
+          }
+        }
         state.cartItems[itemIndexToUpdate].quantity =
           state.cartItems[itemIndexToUpdate].quantity > 1
             ? state.cartItems[itemIndexToUpdate].quantity - 1
@@ -103,6 +116,14 @@ const cartReducer = (state = initialState, action) => {
       );
 
       if (itemIndexToUpdateHigher !== -1) {
+        if (state.cartItems[itemIndexToUpdateHigher].quantity < 9) {
+          const newPriceBeingAddedToCartTotal = parseFloat(
+            state.cartItems[itemIndexToUpdateHigher].price
+          );
+          const existingCartTotalCost = parseFloat(state.cartTotalCost);
+          state.cartTotalCost =
+            newPriceBeingAddedToCartTotal + existingCartTotalCost;
+        }
         state.cartItems[itemIndexToUpdateHigher].quantity =
           state.cartItems[itemIndexToUpdateHigher].quantity < 9
             ? state.cartItems[itemIndexToUpdateHigher].quantity + 1
@@ -127,6 +148,11 @@ const cartReducer = (state = initialState, action) => {
         (item) => item.name === removalItem && item.status === "Incomplete"
       );
       if (removalIndex !== -1) {
+        const removedPrice = parseFloat(state.cartItems[removalIndex].price);
+        const removeCurrentTotalCost = parseFloat(state.cartTotalCost);
+        const removalQuantity = state.cartItems[removalIndex].quantity;
+        state.cartTotalCost =
+          removeCurrentTotalCost - removedPrice * removalQuantity;
         const updatedCartItems = [
           ...state.cartItems.slice(0, removalIndex),
           ...state.cartItems.slice(removalIndex + 1),
@@ -153,10 +179,29 @@ const cartReducer = (state = initialState, action) => {
         total += itemPrice * itemQuantity;
       });
       let temp = total.toFixed(2);
+
       return {
         ...state,
         cartItems: statup,
         totalCost: temp,
+      };
+
+    case "cartPriceUpdate":
+      const cartUp = state.cartItems.map((item) => ({
+        ...item,
+        status: "Incomplete",
+      }));
+      let totalCart = 0;
+      state.cartItems.forEach((item) => {
+        const itemPrice = parseFloat(item.price);
+        const itemQuantity = parseFloat(item.quantity);
+        totalCart += itemPrice * itemQuantity;
+      });
+      let tempcart = totalCart.toFixed(2);
+      console.log(tempcart);
+      return {
+        ...state,
+        cartTotalCost: tempcart,
       };
 
     default:

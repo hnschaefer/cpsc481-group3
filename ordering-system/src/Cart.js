@@ -17,15 +17,21 @@ import { useNavigate } from "react-router-dom";
 
 function Cart() {
   const cartState = useSelector((state) => state.cart.cartItems);
+  const tempCart = useSelector((state) => state);
   const orderedItems = cartState.filter((item) => item.status === "Incomplete");
   const navigate = useNavigate();
-  // const [contents, setContents] = useState(state.cart.cartItems);
   const [selectedItem, setSelectedItem] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const [temp, setTemp] = useState("");
   const dispatch = useDispatch();
-  const { lowerCart, higherCart, updateNote, removeCart, upstat } =
-    bindActionCreators(actionCreators, dispatch);
+  const {
+    lowerCart,
+    higherCart,
+    updateNote,
+    removeCart,
+    upstat,
+    cartPriceUpdate,
+  } = bindActionCreators(actionCreators, dispatch);
 
   const lowerQuant = (item) => {
     lowerCart(item);
@@ -53,7 +59,6 @@ function Cart() {
   const removalOfItem = (item) => {
     const name = item;
     removeCart(name);
-    // setContents(state.cart.cartItems);
   };
 
   const handleSaveNote = () => {
@@ -68,7 +73,6 @@ function Cart() {
   };
 
   useEffect(() => {
-    //console.log(cartState);
     setTemp("");
   }, [cartState, temp]);
 
@@ -96,7 +100,9 @@ function Cart() {
             <h1 style={{ fontSize: 50, fontWeight: "bold" }}>Notes</h1>
           </td>
           <td>
-            <h1 style={{ fontSize: 50, fontWeight: "bold" }}>Edit/Remove</h1>
+            <h1 style={{ fontSize: 50, fontWeight: "bold", marginLeft: "14%" }}>
+              Edit/Remove
+            </h1>
           </td>
         </tr>
         {orderedItems.map((item) => (
@@ -169,32 +175,46 @@ function Cart() {
                   backgroundColor: "#414042",
                   marginRight: "10px",
                   marginLeft: "35px",
+                  fontSize: 25,
+                  verticalAlign: "middle",
                 }}
                 onClick={() => handleEditClick(item)}
               >
+                Edit
                 <Image
                   src={edit}
                   rounded
                   style={{
-                    width: "60px",
-                    height: "60px",
+                    width: "40px",
+                    height: "40px",
                     filter: "invert(100%)",
+                    display: "inline-block",
+                    marginLeft: 20,
                   }}
                 />
               </Button>
               <Button
                 variant="dark"
                 size="lg"
-                style={{ backgroundColor: "#414042" }}
+                style={{
+                  backgroundColor: "#414042",
+                  marginRight: "10px",
+                  marginLeft: "35px",
+                  fontSize: 25,
+                  verticalAlign: "middle",
+                }}
                 onClick={() => removalOfItem(item.name)}
               >
+                Remove
                 <Image
                   src={remove}
                   rounded
                   style={{
-                    width: "60px",
-                    height: "60px",
+                    width: "40px",
+                    height: "40px",
                     filter: "invert(100%)",
+                    display: "inline-block",
+                    marginLeft: 20,
                   }}
                 />
               </Button>
@@ -202,7 +222,12 @@ function Cart() {
           </tr>
         ))}
       </table>
-
+      <div style={{ textAlign: "center", marginBottom: "20px" }}>
+        <p style={{ fontSize: "35px", fontWeight: "bold" }}>
+          Total Including Current Order Cart: $
+          {parseFloat(tempCart.cart.cartTotalCost).toFixed(2)}
+        </p>
+      </div>
       <Modal show={showModal} onHide={handleModalClose}>
         <Modal.Header closeButton>
           <Modal.Title>Edit Note</Modal.Title>
@@ -237,7 +262,7 @@ function Cart() {
         </Modal.Footer>
       </Modal>
 
-      <div class="d-flex justify-content-center">
+      <div className="d-flex justify-content-center">
         {orderedItems.length > 0 ? (
           <Button
             variant="dark"
@@ -282,9 +307,13 @@ function Cart() {
               textAlign: "center",
               marginTop: "15%",
               color: "red",
+              marginLeft: "10%",
+              marginRight: "10%",
             }}
           >
-            Please add an item to the cart first to send in your order.
+            Please add an item to the cart first to send in your order. If you
+            would like to see your previous sent orders, select the Pay for
+            Order button in the top right.
           </h1>
         )}
       </div>
