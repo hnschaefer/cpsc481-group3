@@ -67,7 +67,14 @@ const cartReducer = (state = initialState, action) => {
     case "lower":
       const updateItem = action.payload;
       const itemIndexToUpdate = state.cartItems.findIndex(
-        (item) => item.name === updateItem && item.status === "Incomplete"
+        (item) =>
+          item.name === updateItem.name &&
+          item.status === "Incomplete" &&
+          item.image === updateItem.image &&
+          item.extraProtein === updateItem.extraProtein &&
+          item.note === updateItem.note &&
+          item.price === updateItem.price &&
+          item.quantity === updateItem.quantity
       );
 
       if (itemIndexToUpdate !== -1) {
@@ -83,8 +90,16 @@ const cartReducer = (state = initialState, action) => {
 
     case "higher":
       const higherItem = action.payload;
+      console.log(higherItem);
       const itemIndexToUpdateHigher = state.cartItems.findIndex(
-        (item) => item.name === higherItem && item.status === "Incomplete"
+        (item) =>
+          item.name === higherItem.name &&
+          item.status === "Incomplete" &&
+          item.image === higherItem.image &&
+          item.extraProtein === higherItem.extraProtein &&
+          item.note === higherItem.note &&
+          item.price === higherItem.price &&
+          item.quantity === higherItem.quantity
       );
 
       if (itemIndexToUpdateHigher !== -1) {

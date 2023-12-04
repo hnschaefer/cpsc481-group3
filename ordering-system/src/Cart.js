@@ -126,7 +126,7 @@ function Cart() {
                   }}
                   onClick={() => {
                     tempRefresh(item);
-                    lowerQuant(item.name);
+                    lowerQuant(item);
                   }}
                 >
                   <span style={{ fontSize: "40px" }}>-</span>
@@ -151,7 +151,7 @@ function Cart() {
                   }}
                   onClick={() => {
                     tempRefresh(item);
-                    higherQuant(item.name);
+                    higherQuant(item);
                   }}
                 >
                   <span style={{ fontSize: "40px" }}>+</span>
