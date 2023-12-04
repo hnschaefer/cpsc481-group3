@@ -23,7 +23,7 @@ function CallForServer() {
     const selectedItems = items.filter((item) => item.completed);
 
     if (selectedItems.length === 0) {
-      setShowMessage("Please select one of the options!");
+      setShowMessage("Please select one or more of the options!");
       setTimeout(() => {
         setShowMessage(false);
       }, 3000);

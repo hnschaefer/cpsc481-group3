@@ -66,7 +66,7 @@ function DetailedItem() {
   };
 
   const handleIncrement = () => {
-    if (count < 10) {
+    if (count < 9) {
       setCount(count + 1);
       cartdetails.quantity = count;
     }

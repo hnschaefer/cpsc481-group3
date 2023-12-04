@@ -73,7 +73,15 @@ function Pay() {
                 rounded
                 style={{ width: "240px", height: "200px" }}
               />
-              <p>{item.name}</p>
+              <p
+                style={{
+                  textAlign: "center",
+                  fontSize: "25px",
+                  fontWeight: "light",
+                }}
+              >
+                {item.name}
+              </p>
             </td>
             <td>
               <p>{item.note}</p>
@@ -152,7 +160,7 @@ function Pay() {
             style={{
               fontSize: 30,
               textAlign: "center",
-              marginTop: "15%",
+              marginTop: "10%",
               color: "red",
             }}
           >

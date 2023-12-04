@@ -100,9 +100,7 @@ function Cart() {
             <h1 style={{ fontSize: 50, fontWeight: "bold" }}>Notes</h1>
           </td>
           <td>
-            <h1 style={{ fontSize: 50, fontWeight: "bold", marginLeft: "14%" }}>
-              Edit/Remove
-            </h1>
+            <h1 style={{ fontSize: 50, fontWeight: "bold" }}>Edit/Remove</h1>
           </td>
         </tr>
         {orderedItems.map((item) => (
@@ -113,7 +111,7 @@ function Cart() {
                 rounded
                 style={{ width: "300px", height: "230px" }}
               />
-              <p style={{ fontSize: "35px" }}>
+              <p style={{ fontSize: "25px" }}>
                 {item.name + `: $` + item.price}
               </p>
             </td>
@@ -168,56 +166,51 @@ function Cart() {
               <span style={{ fontSize: 20 }}>{item.note}</span>
             </td>
             <td>
-              <Button
-                variant="dark"
-                size="lg"
-                style={{
-                  backgroundColor: "#414042",
-                  marginRight: "10px",
-                  marginLeft: "35px",
-                  fontSize: 25,
-                  verticalAlign: "middle",
-                }}
-                onClick={() => handleEditClick(item)}
-              >
-                Edit
-                <Image
-                  src={edit}
-                  rounded
+              <div style={{ display: "inline-flex", alignItems: "center" }}>
+                <Button
+                  variant="dark"
+                  size="lg"
                   style={{
-                    width: "40px",
-                    height: "40px",
-                    filter: "invert(100%)",
-                    display: "inline-block",
-                    marginLeft: 20,
+                    backgroundColor: "#414042",
+                    marginRight: "35px",
                   }}
-                />
-              </Button>
-              <Button
-                variant="dark"
-                size="lg"
-                style={{
-                  backgroundColor: "#414042",
-                  marginRight: "10px",
-                  marginLeft: "35px",
-                  fontSize: 25,
-                  verticalAlign: "middle",
-                }}
-                onClick={() => removalOfItem(item.name)}
-              >
-                Remove
-                <Image
-                  src={remove}
-                  rounded
+                  onClick={() => handleEditClick(item)}
+                >
+                  Edit
+                  <Image
+                    src={edit}
+                    rounded
+                    style={{
+                      width: "30px",
+                      height: "30px",
+                      filter: "invert(100%)",
+                      display: "inline-block",
+                      marginLeft: 10,
+                    }}
+                  />
+                </Button>
+                <Button
+                  variant="dark"
+                  size="lg"
                   style={{
-                    width: "40px",
-                    height: "40px",
-                    filter: "invert(100%)",
-                    display: "inline-block",
-                    marginLeft: 20,
+                    backgroundColor: "#414042",
                   }}
-                />
-              </Button>
+                  onClick={() => removalOfItem(item.name)}
+                >
+                  Remove
+                  <Image
+                    src={remove}
+                    rounded
+                    style={{
+                      width: "30px",
+                      height: "30px",
+                      filter: "invert(100%)",
+                      display: "inline-block",
+                      marginLeft: 10,
+                    }}
+                  />
+                </Button>
+              </div>
             </td>
           </tr>
         ))}
@@ -305,7 +298,7 @@ function Cart() {
             style={{
               fontSize: 30,
               textAlign: "center",
-              marginTop: "15%",
+              marginTop: "10%",
               color: "red",
               marginLeft: "10%",
               marginRight: "10%",

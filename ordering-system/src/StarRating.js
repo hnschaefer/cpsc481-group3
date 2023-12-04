@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
 const StarRating = ({ rating }) => {
   const starStyle = {
-    fontSize: '30px',
-    color: '#FFAA33 ',
+    fontSize: "30px",
+    color: "#FFAA33 ",
   };
 
   const stars = [];
@@ -12,7 +12,7 @@ const StarRating = ({ rating }) => {
       stars.push(
         <span
           key={i}
-          className={i <= rating ? 'star filled' : 'star'}
+          className={i <= rating ? "star filled" : "star"}
           style={starStyle}
         >
           &#9733;
@@ -20,11 +20,7 @@ const StarRating = ({ rating }) => {
       );
     } else {
       stars.push(
-        <span
-          key={i}
-          className={'star'}
-          style={starStyle}
-        >
+        <span key={i} className={"star"} style={starStyle}>
           &#9733;
         </span>
       );
