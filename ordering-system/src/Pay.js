@@ -4,12 +4,24 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Button from "react-bootstrap/Button";
 import Image from "react-bootstrap/Image";
 import ReturnToMenuNavbar from "./ReturnToMenuNavbar";
-import StarRating from "./StarRating";
 import { useSelector } from "react-redux";
 import PaymentConfirmation from "./PaymentConfirmation";
+import { FaStar } from "react-icons/fa";
 
 function Pay() {
-  const spaghettiRating = 4;
+  const colors = {
+    orange: "#FFBA5A",
+    grey: "#a9a9a9",
+  };
+
+  const [itemRatings, setItemRatings] = useState({});
+
+  const handleClick = (itemName, value) => {
+    setItemRatings({
+      ...itemRatings,
+      [itemName]: value,
+    });
+  };
 
   const payCart = useSelector((state) => state.cart.cartItems);
   const costs = useSelector((state) => state.cart);
@@ -110,8 +122,19 @@ function Pay() {
             </td>
             <td>
               <div>
-                <StarRating rating={spaghettiRating} />
-              </div>
+                {[...Array(5)].map((_, index) => (
+                  <FaStar
+                    key={index}
+                    color={
+                      itemRatings[item.name] > index
+                        ? colors.orange
+                        : colors.grey
+                    }
+                    style={{ height: 40, width: 30 }}
+                    onClick={() => handleClick(item.name, index + 1)}
+                  />
+                ))}
+              </div>{" "}
             </td>
           </tr>
         ))}

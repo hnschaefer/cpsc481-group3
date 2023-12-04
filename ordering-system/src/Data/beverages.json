@@ -5,7 +5,7 @@
     "price": 20.0,
     "image": "cadillac",
     "desc": "Don julio reposado, grand marnier, fresh lime",
-    "tags": ""
+    "tags": [""]
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "price": 13.25,
     "image": "mezcal",
     "desc": "400 conejos mezcal, cuervo tradicional plata, triple sec, charred pineapple, fresh lime",
-    "tags": ""
+    "tags": [""]
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
     "price": 12.25,
     "image": "sangriasignature",
     "desc": "Zinfandel, apricot brandy, fresh strawberries, raspberries, sprite and bellini",
-    "tags": ""
+    "tags": [""]
   },
   {
     "id": 4,
@@ -29,7 +29,7 @@
     "price": 13.0,
     "image": "midnighthour",
     "desc": "Espresso martini with smirnoff vodka, kahlua, fresh espresso, chocolate bitters",
-    "tags": ""
+    "tags": [""]
   },
   {
     "id": 5,
@@ -37,7 +37,7 @@
     "price": 16.0,
     "image": "penicillin",
     "desc": "Johnnie walker black, honey, ginger, lemon, lagavulin peated whisky",
-    "tags": ""
+    "tags": [""]
   },
   {
     "id": 6,
@@ -45,7 +45,7 @@
     "price": 13.75,
     "image": "whiskeysour",
     "desc": "Jack Daniel’s tennessee whiskey, fresh lemon, lime, egg whites and angostura bitters",
-    "tags": ""
+    "tags": [""]
   },
   {
     "id": 7,
@@ -53,7 +53,7 @@
     "price": 10.75,
     "image": "vodka",
     "desc": "Smirnoff vodka or gordon’s dry gin, white peach, elderflower, soda, cucumber",
-    "tags": ""
+    "tags": [""]
   },
   {
     "id": 8,
@@ -61,7 +61,7 @@
     "price": 12.75,
     "image": "kyotofizz",
     "desc": "Smirnoff vodka, sake, yuzu, white peach, chamomile, lime, soda and thyme",
-    "tags": ""
+    "tags": [""]
   },
   {
     "id": 9,
@@ -69,7 +69,7 @@
     "price": 10.75,
     "image": "tequilaseltzer",
     "desc": "Cazadores reposado, guava, soda, lime",
-    "tags": ""
+    "tags": [""]
   },
   {
     "id": 10,
@@ -77,7 +77,7 @@
     "price": 13.75,
     "image": "aperolspritz",
     "desc": "Prosecco, aperol, soda and orange",
-    "tags": ""
+    "tags": [""]
   },
   {
     "id": 11,
@@ -85,7 +85,7 @@
     "price": 11.0,
     "image": "bellini",
     "desc": "Bacardi superior, peach schnapps, sparkling wine, peach and sangria",
-    "tags": ""
+    "tags": [""]
   },
   {
     "id": 12,
@@ -93,7 +93,7 @@
     "price": 12.25,
     "image": "pearl",
     "desc": "Kiwi, cucumber, mint, soda, popping passion fruit pearls",
-    "tags": ""
+    "tags": [""]
   },
   {
     "id": 13,
@@ -101,7 +101,7 @@
     "price": 13.25,
     "image": "hulahula",
     "desc": "Aviation american gin, campari, pineapple, passion fruit, tropical bitters",
-    "tags": ""
+    "tags": [""]
   },
   {
     "id": 14,
@@ -109,6 +109,6 @@
     "price": 7.0,
     "image": "cocacola",
     "desc": "Refreshing soda",
-    "tags": ""
+    "tags": [""]
   }
 ]

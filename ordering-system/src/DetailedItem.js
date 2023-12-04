@@ -43,14 +43,6 @@ function DetailedItem() {
   const dispatch = useDispatch();
   const { addToCart } = bindActionCreators(actionCreators, dispatch);
 
-  const isProteinOptionsAvailable = [
-    "Raincoast Greens",
-    "Avocado Kale Salad",
-    "Thai Green Curry",
-    "Chargrilled Steak",
-    "The Med Bowl",
-  ].includes(name);
-
   const proteinAvailable = [
     "Raincoast Greens",
     "Avocado Kale Salad",
@@ -130,7 +122,11 @@ function DetailedItem() {
               Price: ${price}
             </p>
             <p className="text-left" style={{ fontSize: "22px" }}>
-              Tags: <u>{tags}</u>
+              {tags[0] !== "" && (
+                <div>
+                  Tags: <u>{tags}</u>
+                </div>
+              )}{" "}
             </p>
           </Col>
           <Col md={6}>
