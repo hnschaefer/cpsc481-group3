@@ -1,5 +1,6 @@
 const initialState = {
   cartItems: [],
+  totalCost: 0,
 };
 
 const cartReducer = (state = initialState, action) => {
@@ -12,7 +13,29 @@ const cartReducer = (state = initialState, action) => {
       );
 
       if (existingItemIndex !== -1) {
-        state.cartItems[existingItemIndex].quantity += newItem.quantity;
+        if (state.cartItems[existingItemIndex].status === "Ordered") {
+          console.log(state.cartItems);
+          state.cartItems.push({
+            name: newItem.name,
+            quantity: newItem.quantity,
+            price: newItem.itemPrice,
+            note: newItem.note,
+            image: newItem.image,
+            extraProtein: newItem.extraProtein,
+            status: "Incomplete",
+          });
+        } else {
+          console.log(state.cartItems);
+          state.cartItems.push({
+            name: newItem.name,
+            quantity: newItem.quantity,
+            price: newItem.itemPrice,
+            note: newItem.note,
+            image: newItem.image,
+            extraProtein: newItem.extraProtein,
+            status: "Incomplete",
+          });
+        }
       } else {
         if (newItem.extraProtein !== "") {
           state.cartItems.push({
@@ -44,7 +67,7 @@ const cartReducer = (state = initialState, action) => {
     case "lower":
       const updateItem = action.payload;
       const itemIndexToUpdate = state.cartItems.findIndex(
-        (item) => item.name === updateItem
+        (item) => item.name === updateItem && item.status === "Incomplete"
       );
 
       if (itemIndexToUpdate !== -1) {
@@ -61,7 +84,7 @@ const cartReducer = (state = initialState, action) => {
     case "higher":
       const higherItem = action.payload;
       const itemIndexToUpdateHigher = state.cartItems.findIndex(
-        (item) => item.name === higherItem
+        (item) => item.name === higherItem && item.status === "Incomplete"
       );
 
       if (itemIndexToUpdateHigher !== -1) {
@@ -77,7 +100,7 @@ const cartReducer = (state = initialState, action) => {
     case "overwritenote":
       const newNote = action.payload;
       const noteIndex = state.cartItems.findIndex(
-        (item) => item.name === newNote.name
+        (item) => item.name === newNote.name && item.status === "Incomplete"
       );
       state.cartItems[noteIndex].note = newNote.note;
       return {
@@ -86,7 +109,7 @@ const cartReducer = (state = initialState, action) => {
     case "remove":
       const removalItem = action.payload;
       const removalIndex = state.cartItems.findIndex(
-        (item) => item.name === removalItem
+        (item) => item.name === removalItem && item.status === "Incomplete"
       );
       if (removalIndex !== -1) {
         const updatedCartItems = [
@@ -108,9 +131,17 @@ const cartReducer = (state = initialState, action) => {
         ...item,
         status: "Ordered",
       }));
+      let total = 0;
+      state.cartItems.forEach((item) => {
+        const itemPrice = parseFloat(item.price);
+        const itemQuantity = parseFloat(item.quantity);
+        total += itemPrice * itemQuantity;
+      });
+      let temp = total.toFixed(2);
       return {
         ...state,
         cartItems: statup,
+        totalCost: temp,
       };
 
     default:

@@ -36,6 +36,7 @@ function DetailedItem() {
     note: note,
     image: image,
     extraProtein: "",
+    status: "Incomplete",
   };
 
   const state = useSelector((state) => state);
@@ -90,7 +91,7 @@ function DetailedItem() {
 
   return (
     <div className="DetailedItem">
-      {console.log(state)}
+      {console.log(state.totalCost)}
       <div
         style={{
           backgroundColor: "#414042",

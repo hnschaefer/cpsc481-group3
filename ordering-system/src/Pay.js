@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import "./App.css";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Button from "react-bootstrap/Button";
@@ -5,29 +6,24 @@ import Image from "react-bootstrap/Image";
 import ReturnToMenuNavbar from "./ReturnToMenuNavbar";
 import StarRating from "./StarRating";
 import { useSelector } from "react-redux";
-import { useEffect } from "react";
+import PaymentConfirmation from "./PaymentConfirmation";
 
 function Pay() {
-  // Sample rating values for the items
   const spaghettiRating = 4;
 
-  // Calculate the total price of items
-  let totalPrice = 0;
-
   const payCart = useSelector((state) => state.cart.cartItems);
+  const costs = useSelector((state) => state.cart);
   const orderedItems = payCart.filter((item) => item.status === "Ordered");
-  console.log(orderedItems);
 
-  // const calcCost = () => {
-  //   totalPrice = orderedItems.reduce((accumulator, item) => {
-  //     const itemCost = item.price * item.quantity;
-  //     return accumulator + itemCost;
-  //   }, 0);
-  // };
+  const [showMessage, setShowMessage] = useState(false);
 
-  // useEffect(() => {
-  //   calcCost();
-  // }, []);
+  const handleMakePayment = () => {
+    setShowMessage(true);
+  };
+
+  const handleCloseMessage = () => {
+    setShowMessage(false);
+  };
 
   return (
     <div className="Cart">
@@ -42,10 +38,15 @@ function Pay() {
       </div>
       <br />
       <table style={{ marginLeft: "auto", marginRight: "auto" }}>
-        <tr>
+        <tr style={{ fontSize: "25px" }}>
           <td>
             <h1>
               <b>Items</b>
+            </h1>
+          </td>
+          <td>
+            <h1>
+              <b>Notes</b>
             </h1>
           </td>
           <td>
@@ -65,7 +66,7 @@ function Pay() {
           </td>
         </tr>
         {orderedItems.map((item) => (
-          <tr>
+          <tr key={item.name}>
             <td>
               <Image
                 src={require("./images/" + item.image + ".jpg")}
@@ -73,6 +74,9 @@ function Pay() {
                 style={{ width: "240px", height: "200px" }}
               />
               <p>{item.name}</p>
+            </td>
+            <td>
+              <p>{item.note}</p>
             </td>
             <td>
               <p
@@ -98,34 +102,63 @@ function Pay() {
             </td>
             <td>
               <div>
-                <StarRating rating={spaghettiRating} />{" "}
+                <StarRating rating={spaghettiRating} />
               </div>
             </td>
           </tr>
         ))}
       </table>
-      <div class="d-flex justify-content-center">
-        <div style={{ textAlign: "center", marginBottom: "20px" }}>
-          <p style={{ fontSize: "25px", fontWeight: "bold" }}>
-            Total: ${totalPrice}
-          </p>
-        </div>
-        <Button
-          variant="dark"
-          size="lg"
-          style={{
-            padding: "0px",
-            marginLeft: "3%",
-            backgroundColor: "#414042",
-            border: "1px solid #c69a50",
-            borderRadius: 0,
-            width: "30%",
-            height: "80px",
-            fontSize: "30px",
-          }}
-        >
-          Make Payment{" "}
-        </Button>{" "}
+      <div style={{ textAlign: "center", marginBottom: "20px" }}>
+        <p style={{ fontSize: "35px", fontWeight: "bold" }}>
+          Total: ${costs.totalCost}
+        </p>
+      </div>
+      <div className="d-flex justify-content-center">
+        {orderedItems.length > 0 ? (
+          <>
+            <Button
+              variant="dark"
+              size="lg"
+              style={{
+                padding: "0px",
+                marginLeft: "3%",
+                backgroundColor: "#414042",
+                border: "1px solid #c69a50",
+                borderRadius: 0,
+                width: "30%",
+                height: "80px",
+                fontSize: "30px",
+              }}
+              onClick={handleMakePayment}
+            >
+              <span
+                style={{
+                  fontSize: "35px",
+                  margin: "0 10px",
+                  verticalAlign: "middle",
+                }}
+              >
+                Make Payment
+              </span>
+            </Button>
+            <PaymentConfirmation
+              show={showMessage}
+              handleClose={handleCloseMessage}
+              message="The server will take payment at your table shortly"
+            />
+          </>
+        ) : (
+          <h1
+            style={{
+              fontSize: 30,
+              textAlign: "center",
+              marginTop: "15%",
+              color: "red",
+            }}
+          >
+            No orders have been placed yet!
+          </h1>
+        )}
       </div>
     </div>
   );

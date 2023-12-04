@@ -13,6 +13,8 @@ import dessertsdata from "../Data/desserts.json";
 import beveragesdata from "../Data/beverages.json";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
+import OrderAlert from "../OrderAlert";
+import { useState } from "react";
 
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 
@@ -21,62 +23,67 @@ const Features = (props) => {
   var renderData = "";
   if (status === "Features") {
     renderData = featuredata;
-    if(filter){
-      renderData = renderData.filter(item => item.tags.includes(filter));
+    if (filter) {
+      renderData = renderData.filter((item) => item.tags.includes(filter));
     }
   } else if (status === "Mains") {
     renderData = mainsdata;
-    if(filter){
-      renderData = renderData.filter(item => item.tags.includes(filter));
+    if (filter) {
+      renderData = renderData.filter((item) => item.tags.includes(filter));
     }
   } else if (status === "Start + Share") {
     renderData = startandsharedata;
-    if(filter){
-      renderData = renderData.filter(item => item.tags.includes(filter));
+    if (filter) {
+      renderData = renderData.filter((item) => item.tags.includes(filter));
     }
   } else if (status === "Bowls") {
     renderData = bowlsdata;
-    if(filter){
-      renderData = renderData.filter(item => item.tags.includes(filter));
+    if (filter) {
+      renderData = renderData.filter((item) => item.tags.includes(filter));
     }
   } else if (status === "Greens") {
     renderData = greensdata;
-    if(filter){
-      renderData = renderData.filter(item => item.tags.includes(filter));
+    if (filter) {
+      renderData = renderData.filter((item) => item.tags.includes(filter));
     }
   } else if (status === "Sushi") {
     renderData = sushidata;
-    if(filter){
-      renderData = renderData.filter(item => item.tags.includes(filter));
+    if (filter) {
+      renderData = renderData.filter((item) => item.tags.includes(filter));
     }
   } else if (status === "Burgers") {
     renderData = burgersdata;
-    if(filter){
-      renderData = renderData.filter(item => item.tags.includes(filter));
+    if (filter) {
+      renderData = renderData.filter((item) => item.tags.includes(filter));
     }
   } else if (status === "Steaks") {
     renderData = steaksdata;
-    if(filter){
-      renderData = renderData.filter(item => item.tags.includes(filter));
+    if (filter) {
+      renderData = renderData.filter((item) => item.tags.includes(filter));
     }
   } else if (status === "Desserts") {
     renderData = dessertsdata;
-    if(filter){
-      renderData = renderData.filter(item => item.tags.includes(filter));
+    if (filter) {
+      renderData = renderData.filter((item) => item.tags.includes(filter));
     }
   } else if (status === "Beverages") {
     renderData = beveragesdata;
-    if(filter){
-      renderData = renderData.filter(item => item.tags.includes(filter));
+    if (filter) {
+      renderData = renderData.filter((item) => item.tags.includes(filter));
     }
   }
 
   const navigate = useNavigate();
+  const [showOrderAlert, setShowOrderAlert] = useState(false);
 
   function goToDetailedItem(id, name, price, image, desc, tags) {
-    navigate("/DetailedItem", {
-      state: { id, name, price, image, desc, tags },
-    });
+    if (name === "Salmon Aburi Roll") {
+      setShowOrderAlert(true);
+    } else {
+      navigate("/DetailedItem", {
+        state: { id, name, price, image, desc, tags },
+      });
+    }
   }
   const state = useSelector((state) => state);
 
@@ -133,6 +140,10 @@ const Features = (props) => {
           </Col>
         ))}
       </Row>
+      <OrderAlert
+        show={showOrderAlert}
+        handleClose={() => setShowOrderAlert(false)}
+      />
     </div>
   );
 };

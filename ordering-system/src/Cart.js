@@ -17,6 +17,7 @@ import { useNavigate } from "react-router-dom";
 
 function Cart() {
   const cartState = useSelector((state) => state.cart.cartItems);
+  const orderedItems = cartState.filter((item) => item.status === "Incomplete");
   const navigate = useNavigate();
   // const [contents, setContents] = useState(state.cart.cartItems);
   const [selectedItem, setSelectedItem] = useState(null);
@@ -67,7 +68,7 @@ function Cart() {
   };
 
   useEffect(() => {
-    console.log(cartState);
+    //console.log(cartState);
     setTemp("");
   }, [cartState, temp]);
 
@@ -98,7 +99,7 @@ function Cart() {
             <h1 style={{ fontSize: 50, fontWeight: "bold" }}>Edit/Remove</h1>
           </td>
         </tr>
-        {cartState.map((item) => (
+        {orderedItems.map((item) => (
           <tr key={item.name}>
             <td style={{ paddingTop: 50 }}>
               <Image
@@ -237,42 +238,55 @@ function Cart() {
       </Modal>
 
       <div class="d-flex justify-content-center">
-        <Button
-          variant="dark"
-          size="lg"
-          style={{
-            padding: "0px",
-            marginLeft: "3%",
-            backgroundColor: "#414042",
-            border: "1px solid #c69a50",
-            borderRadius: 0,
-            width: "30%",
-            height: "80px",
-            fontSize: "30px",
-          }}
-          onClick={() => processOrder()}
-        >
-          <span
+        {orderedItems.length > 0 ? (
+          <Button
+            variant="dark"
+            size="lg"
             style={{
-              fontSize: "35px",
-              margin: "0 10px",
-              verticalAlign: "middle",
+              padding: "0px",
+              marginLeft: "3%",
+              backgroundColor: "#414042",
+              border: "1px solid #c69a50",
+              borderRadius: 0,
+              width: "30%",
+              height: "80px",
+              fontSize: "30px",
+            }}
+            onClick={() => processOrder(cartState)}
+          >
+            <span
+              style={{
+                fontSize: "35px",
+                margin: "0 10px",
+                verticalAlign: "middle",
+              }}
+            >
+              Place Order
+            </span>
+            <Image
+              src={send}
+              rounded
+              style={{
+                width: "30px",
+                height: "40px",
+                filter: "invert(100%)",
+                display: "inline-block",
+                marginLeft: 20,
+              }}
+            />
+          </Button>
+        ) : (
+          <h1
+            style={{
+              fontSize: 30,
+              textAlign: "center",
+              marginTop: "15%",
+              color: "red",
             }}
           >
-            Place Order
-          </span>
-          <Image
-            src={send}
-            rounded
-            style={{
-              width: "30px",
-              height: "40px",
-              filter: "invert(100%)",
-              display: "inline-block",
-              marginLeft: 20,
-            }}
-          />
-        </Button>{" "}
+            Please add an item to the cart first to send in your order.
+          </h1>
+        )}
       </div>
     </div>
   );

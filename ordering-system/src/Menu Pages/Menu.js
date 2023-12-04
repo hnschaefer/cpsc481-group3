@@ -82,13 +82,16 @@ function Menu() {
         }}
       >
         {pageStatus}
+
         <DropdownButton
           id="dropdown-basic-button"
           title="Filter"
           variant="secondary"
           onSelect={(eventKey) => setFilter(eventKey)}
         >
-          <Dropdown.Item eventKey="Vegan-friendly">Vegan-friendly</Dropdown.Item>
+          <Dropdown.Item eventKey="Vegan-friendly">
+            Vegan-friendly
+          </Dropdown.Item>
           <Dropdown.Item eventKey="Vegetarian">Vegetarian</Dropdown.Item>
           <Dropdown.Item eventKey="Gluten-Free">Gluten-Free</Dropdown.Item>
           <Dropdown.Item eventKey="">Clear Filter</Dropdown.Item>
