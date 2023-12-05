@@ -23,9 +23,9 @@ function DetailedItem() {
   const [count, setCount] = useState(1);
   const [note, setNote] = useState("");
   const customize = [
-    "Substitute Salmon - $4",
-    "Substitute Chicken - $4",
-    "Substitute Prawns - $4",
+    "Add Salmon - $4",
+    "Add Chicken - $4",
+    "Add Prawns - $4",
   ];
   const { name, price, image, desc, tags } = location.state || {};
 
@@ -111,7 +111,7 @@ function DetailedItem() {
             <Image
               src={require("./images/" + image + ".jpg")}
               rounded
-              style={{ width: "480px", height: "400px" }}
+              style={{ width: "480px", height: "400px", objectFit: "cover" }}
             />
             <p className="text-left" style={{ fontSize: "25px" }}>
               {desc}

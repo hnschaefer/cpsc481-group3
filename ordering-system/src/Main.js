@@ -6,7 +6,6 @@ import Cart from "./Cart";
 import DetailedItem from "./DetailedItem";
 import OrderAlert from "./OrderAlert";
 import AddToCart from "./AddToCart";
-import ThankYou from "./ThankYou";
 import Pay from "./Pay";
 import Testpage from "./Testpage";
 
@@ -19,7 +18,6 @@ function Main() {
         <Route path="/Cart" index element={<Cart />} />
         <Route path="/Alert" index element={<OrderAlert />} />
         <Route path="/Popup" index element={<AddToCart />} />
-        <Route path="/ThankYou" index element={<ThankYou />} />
         <Route path="/Pay" index element={<Pay />} />
         <Route path="/test" index element={<Testpage />} />
       </Routes>
