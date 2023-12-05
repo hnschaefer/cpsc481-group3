@@ -83,10 +83,20 @@ function Cart() {
           backgroundColor: "#414042",
           paddingTop: 20,
           paddingBottom: 20,
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          zIndex: 1000
         }}
       >
         <ReturnToMenuNavbar />
       </div>
+      <div
+        style={{
+          paddingTop: 140
+        }}
+      />
       <br></br>
       <table style={{ marginLeft: "auto", marginRight: "auto" }}>
         <tr>
@@ -100,7 +110,7 @@ function Cart() {
             <h1 style={{ fontSize: 50, fontWeight: "bold" }}>Notes</h1>
           </td>
           <td>
-            <h1 style={{ fontSize: 50, fontWeight: "bold" }}>Edit/Remove</h1>
+            <h1 style={{ fontSize: 50, fontWeight: "bold" }}>Modify</h1>
           </td>
         </tr>
         {orderedItems.map((item) => (
@@ -218,7 +228,7 @@ function Cart() {
       </table>
       <div style={{ textAlign: "center", marginBottom: "20px" }}>
         <p style={{ fontSize: "35px", fontWeight: "bold" }}>
-          Total Including Current Order Cart: $
+          Total Including Previous Orders: $
           {parseFloat(tempCart.cart.cartTotalCost).toFixed(2)}
         </p>
       </div>

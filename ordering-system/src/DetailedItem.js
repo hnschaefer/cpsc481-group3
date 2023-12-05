@@ -89,10 +89,20 @@ function DetailedItem() {
           backgroundColor: "#414042",
           paddingTop: 20,
           paddingBottom: 20,
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          zIndex: 1000
         }}
       >
         <ReturnToMenuNavbar />
       </div>
+      <div
+        style={{
+          paddingTop: 140
+        }}
+      />
       <br></br>
       <Container>
         <Row>
