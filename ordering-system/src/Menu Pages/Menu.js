@@ -28,6 +28,11 @@ function Menu() {
           backgroundColor: "#414042",
           paddingTop: 20,
           paddingBottom: 20,
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          zIndex: 1000
         }}
       >
         <Navbar />
@@ -37,8 +42,8 @@ function Menu() {
           style={{
             fontSize: 55,
             textAlign: "center",
-            paddingTop: 40,
-            paddingBottom: 40,
+            paddingTop: 170,
+            paddingBottom: 30,
             fontWeight: "bold",
           }}
         >
