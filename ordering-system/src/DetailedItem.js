@@ -180,29 +180,35 @@ function DetailedItem() {
                   alignItems: "center",
                 }}
               >
-                <button
+                <Button
+                  variant="light"
+                  size="lg"
                   style={{
-                    fontSize: 20,
-                    border: "3px solid black",
-                    height: 40,
-                    width: 40,
+                    marginLeft: "10px",
+                    marginRight: "10px",
+                    width: "60px",
+                    height: "80px",
+                    border: "2px solid black",
                   }}
                   onClick={handleDecrement}
                 >
-                  -
-                </button>
+                  <span style={{ fontSize: "40px" }}>-</span>
+                </Button>
                 <h1 style={{ margin: "0 20px" }}>{count}</h1>
-                <button
+                <Button
+                  variant="light"
+                  size="lg"
                   style={{
-                    fontSize: 20,
-                    border: "3px solid black",
-                    height: 40,
-                    width: 40,
+                    marginLeft: "10px",
+                    marginRight: "10px",
+                    width: "60px",
+                    height: "80px",
+                    border: "2px solid black",
                   }}
                   onClick={handleIncrement}
                 >
-                  +
-                </button>
+                  <span style={{ fontSize: "40px" }}>+</span>
+                </Button>
               </div>
             </>
           </Col>

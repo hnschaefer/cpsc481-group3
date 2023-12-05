@@ -148,6 +148,7 @@ function Cart() {
                   variant="light"
                   size="lg"
                   style={{
+                    marginLeft: "10px",
                     marginRight: "10px",
                     width: "60px",
                     height: "80px",
@@ -305,7 +306,7 @@ function Cart() {
             }}
           >
             Please add an item to the cart first to send in your order. If you
-            would like to see your previous sent orders, select the Pay for
+            would like to see your previously sent orders, select the Pay for
             Order button in the top right.
           </h1>
         )}

@@ -73,7 +73,7 @@ function Pay() {
           </td>
           <td>
             <h1>
-              <b>Review</b>
+              <b>Rate</b>
             </h1>
           </td>
         </tr>

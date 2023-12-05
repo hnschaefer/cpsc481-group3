@@ -68,7 +68,7 @@ function CallForServer() {
                     </li>
                   ))}
                   <button className="ok-button" onClick={handleRequestClick}>
-                    Ok
+                    Send
                   </button>
                   <button
                     style={{ marginTop: 5 }}
