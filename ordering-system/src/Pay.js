@@ -5,7 +5,7 @@ import Button from "react-bootstrap/Button";
 import Image from "react-bootstrap/Image";
 import ReturnToMenuNavbar from "./ReturnToMenuNavbar";
 import { useSelector } from "react-redux";
-import PaymentConfirmation from "./PaymentConfirmation";
+import Confirmation from "./Confirmation";
 import { FaStar } from "react-icons/fa";
 
 function Pay() {
@@ -73,12 +73,12 @@ function Pay() {
           </td>
           <td>
             <h1>
-              <b>Price</b>
+              <b>Quantity</b>
             </h1>
           </td>
           <td>
             <h1>
-              <b>Quantity</b>
+              <b>Price</b>
             </h1>
           </td>
           <td>
@@ -93,7 +93,7 @@ function Pay() {
               <Image
                 src={require("./images/" + item.image + ".jpg")}
                 rounded
-                style={{ width: "240px", height: "200px" }}
+                style={{ width: "240px", height: "200px", objectFit: "cover" }}
               />
               <p
                 style={{
@@ -102,7 +102,7 @@ function Pay() {
                   fontWeight: "light",
                 }}
               >
-                {item.name}
+                {item.name + `: $` + item.price}
               </p>
             </td>
             <td>
@@ -116,7 +116,7 @@ function Pay() {
                   fontWeight: "light",
                 }}
               >
-                {item.price}
+                {item.quantity}
               </p>
             </td>
             <td>
@@ -127,7 +127,7 @@ function Pay() {
                   fontWeight: "light",
                 }}
               >
-                {item.quantity}
+                {'$' + item.price*item.quantity}
               </p>
             </td>
             <td>
@@ -182,7 +182,7 @@ function Pay() {
                 Make Payment
               </span>
             </Button>
-            <PaymentConfirmation
+            <Confirmation
               show={showMessage}
               handleClose={handleCloseMessage}
               message="The server will take payment at your table shortly"

@@ -9,17 +9,16 @@ import send from "./icons/icons/send.svg";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Image from "react-bootstrap/Image";
 import ReturnToMenuNavbar from "./ReturnToMenuNavbar";
+import Confirmation from "./Confirmation"
 import { useSelector, useDispatch } from "react-redux";
 import { actionCreators } from "./state/actionimp";
 import { bindActionCreators } from "redux";
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 
 function Cart() {
   const cartState = useSelector((state) => state.cart.cartItems);
   const tempCart = useSelector((state) => state);
   const orderedItems = cartState.filter((item) => item.status === "Incomplete");
-  const navigate = useNavigate();
   const [selectedItem, setSelectedItem] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const [temp, setTemp] = useState("");
@@ -67,9 +66,15 @@ function Cart() {
     setShowModal(false);
   };
 
-  const processOrder = (cartState) => {
+  const [showMessage, setShowMessage] = useState(false);
+
+  const handleCloseMessage = () => {
+    setShowMessage(false);
     upstat(cartState);
-    navigate("/ThankYou");
+  };
+
+  const processOrder = (cartState) => {
+    setShowMessage(true);
   };
 
   useEffect(() => {
@@ -104,10 +109,10 @@ function Cart() {
             <h1 style={{ fontSize: 50, fontWeight: "bold" }}>Items</h1>
           </td>
           <td>
-            <h1 style={{ fontSize: 50, fontWeight: "bold" }}>Quantity</h1>
+            <h1 style={{ fontSize: 50, fontWeight: "bold" }}>Notes</h1>
           </td>
           <td>
-            <h1 style={{ fontSize: 50, fontWeight: "bold" }}>Notes</h1>
+            <h1 style={{ fontSize: 50, fontWeight: "bold" }}>Quantity</h1>
           </td>
           <td>
             <h1 style={{ fontSize: 50, fontWeight: "bold" }}>Modify</h1>
@@ -119,11 +124,14 @@ function Cart() {
               <Image
                 src={require("./images/" + item.image + ".jpg")}
                 rounded
-                style={{ width: "300px", height: "230px" }}
+                style={{ width: "300px", height: "230px", objectFit: "cover" }}
               />
               <p style={{ fontSize: "25px" }}>
                 {item.name + `: $` + item.price}
               </p>
+            </td>
+            <td>
+              <span style={{ fontSize: 20 }}>{item.note}</span>
             </td>
             <td>
               <p>
@@ -172,9 +180,6 @@ function Cart() {
                   <span style={{ fontSize: "40px" }}>+</span>
                 </Button>
               </p>
-            </td>
-            <td>
-              <span style={{ fontSize: 20 }}>{item.note}</span>
             </td>
             <td>
               <div style={{ display: "inline-flex", alignItems: "center" }}>
@@ -268,42 +273,49 @@ function Cart() {
 
       <div className="d-flex justify-content-center">
         {orderedItems.length > 0 ? (
-          <Button
-            variant="dark"
-            size="lg"
-            style={{
-              padding: "0px",
-              marginLeft: "3%",
-              backgroundColor: "#414042",
-              border: "1px solid #c69a50",
-              borderRadius: 0,
-              width: "30%",
-              height: "80px",
-              fontSize: "30px",
-            }}
+          <>
+            <Button
+              variant="dark"
+              size="lg"
+              style={{
+                padding: "0px",
+                marginLeft: "3%",
+                backgroundColor: "#414042",
+                border: "1px solid #c69a50",
+                borderRadius: 0,
+                width: "30%",
+                height: "80px",
+                fontSize: "30px",
+              }}
             onClick={() => processOrder(cartState)}
-          >
-            <span
-              style={{
-                fontSize: "35px",
-                margin: "0 10px",
-                verticalAlign: "middle",
-              }}
             >
-              Place Order
-            </span>
-            <Image
-              src={send}
-              rounded
-              style={{
-                width: "30px",
-                height: "40px",
-                filter: "invert(100%)",
-                display: "inline-block",
-                marginLeft: 20,
-              }}
+              <span
+                style={{
+                  fontSize: "35px",
+                  margin: "0 10px",
+                  verticalAlign: "middle",
+                }}
+              >
+                Place Order
+              </span>
+              <Image
+                src={send}
+                rounded
+                style={{
+                  width: "30px",
+                  height: "40px",
+                  filter: "invert(100%)",
+                  display: "inline-block",
+                  marginLeft: 20,
+                }}
+              />
+            </Button>
+            <Confirmation
+              show={showMessage}
+              handleClose={handleCloseMessage}
+              message="Your order has been placed. Thank you!"
             />
-          </Button>
+          </>
         ) : (
           <h1
             style={{

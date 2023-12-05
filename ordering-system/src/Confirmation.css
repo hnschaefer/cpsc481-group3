@@ -1,5 +1,5 @@
-/*PaymentConfirmation.css*/
-.payment-confirmation-container {
+/*Confirmation.css*/
+.confirmation-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,7 +15,7 @@
   border: 1px solid #ccc;
   border-radius: 10px;
 }
-.ok-payment-confirmation-button {
+.ok-confirmation-button {
   background-color: #414042;
   width: 30%;
   height: 40px;

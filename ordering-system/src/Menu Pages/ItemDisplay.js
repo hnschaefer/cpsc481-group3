@@ -111,7 +111,7 @@ const Features = (props) => {
                 <Card.Img
                   variant="top"
                   src={require("../images/" + menu.image + ".jpg")}
-                  style={{ width: "300px", height: "230px", objectFit: "cover "}}
+                  style={{ width: "300px", height: "230px", objectFit: "cover" }}
                 />
                 <Card.Body style={{ background: "#414042", color: "#ffffff" }}>
                   <Card.Title style={{ fontSize: 20 }}>{menu.item}</Card.Title>

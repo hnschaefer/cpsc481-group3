@@ -1,8 +1,8 @@
 import React from "react";
 import Modal from "react-bootstrap/Modal";
-import "./PaymentConfirmation.css";
+import "./Confirmation.css";
 
-function PaymentConfirmation({ show, handleClose, message }) {
+function Confirmation({ show, handleClose, message }) {
   return (
     <Modal show={show} onHide={handleClose}>
       <Modal.Header closeButton>
@@ -11,7 +11,7 @@ function PaymentConfirmation({ show, handleClose, message }) {
       <Modal.Body>{message}</Modal.Body>
       <Modal.Footer>
         <button
-          className="ok-payment-confirmation-button"
+          className="ok-confirmation-button"
           onClick={handleClose}
         >
           OK
@@ -21,4 +21,4 @@ function PaymentConfirmation({ show, handleClose, message }) {
   );
 }
 
-export default PaymentConfirmation;
+export default Confirmation;
