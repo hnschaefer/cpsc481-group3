@@ -4,11 +4,15 @@ This project is hosted using Vercel at the address:
 ** https://cpsc481-group3.vercel.app/ **
 
 Alternatively, you can run the program locally with React. 
+
 Steps:
+
 Install Node.js
+
 Recommended version is 20.9.0
-In your terminal, navigate to the project folder, ordering-system, and run the command “npm install” to install all dependencies required 
-Once that is done, run the command “npm start” to start up the application. It will start up in your browser locally, at http://localhost:3000
+
+In your terminal, navigate to the project folder, "ordering-system", and run the command `npm install` to install all dependencies required 
+Once that is done, run the command `npm start` to start up the application. It will start up in your browser locally, at http://localhost:3000
 
 Hamza Lodhi - 30122098 - hamza.lodhi@ucalgary.ca
 Heidi Schaefer - 30084340 - heidi.schaefer@ucalgary.ca
