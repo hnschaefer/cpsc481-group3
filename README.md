@@ -15,9 +15,13 @@ In your terminal, navigate to the project folder, "ordering-system", and run the
 Once that is done, run the command `npm start` to start up the application. It will start up in your browser locally, at http://localhost:3000
 
 Hamza Lodhi - 30122098 - hamza.lodhi@ucalgary.ca
+
 Heidi Schaefer - 30084340 - heidi.schaefer@ucalgary.ca
+
 Aninda Shome  - 30093757 - aninda.shome1@ucalgary.ca
+
 Amna Hassan -  30124748 - amna.hassan@ucalgary.ca
+
 Kaia Ntwari -  30087765 - kaia.ntwari@ucalgary.ca
 
 **General Walkthrough**
